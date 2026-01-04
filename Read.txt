@@ -1,0 +1,1 @@
+Högerklicka chrome html filen och öppan med visual studio :)

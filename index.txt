@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+            text-align: center;
+            color: white;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 24px;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 50px 20px;
+        }
+
+        #about {
+            background-color: #374c0f;
+        }
+
+        #projects {
+            background-color: #374c0f;
+            
+        }
+
+        #contact {
+            background-color: #13385f;
+        }
+
+        .project {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .project h2 {
+            font-size: 22px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="#contact">Contact</a>
+</header>
+
+<section id="about">
+    <h1>About Me</h1>
+    <p>I'm Jacob, game designer guy.</p>
+</section>
+
+<section id="projects">
+    <h1>Projects</h1>
+    <div class="project">
+        <h2 onclick="location.href='project1.html'">Project Title 1</h2>
+        <img src="images/hors.jpg" alt="Project 1 Image" onclick="location.href='project1.html'">
+    </div>
+    <div class="project">
+        <h2 onclick="location.href='project2.html'">Project Title 2</h2>
+        <img src="images/hors.jpg" alt="Project 2 Image" onclick="location.href='project2.html'">
+    </div>
+</section>
+
+<section id="contact">
+    <h1>Contact Me</h1>
+    <p>Feel free to reach out via email or social media!</p>
+</section>
+
+<script>
+    document.querySelectorAll('header a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</body>
+</html>
