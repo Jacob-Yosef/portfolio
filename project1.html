@@ -3,60 +3,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Title 1</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: black;
-            color: white;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-            z-index: 1000;
-        }
-
-        header a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-
-        header a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            margin-top: 80px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
-        }
-    </style>
+    <title>Cosmosis | Jacob Yosef</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/project.css">
 </head>
-<body>
+<body class="project-page-body">
 
-<header>
-    <a href="index.html">Home</a>
-</header>
+    <a href="#" id="back-to-top-btn" class="back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        <span>Back to Top</span>
+    </a>
 
-<section>
-    <h1>Project Title 1</h1>
-    <img src="project1.jpg" alt="Project 1 Image">
-    <p>Super cool description.</p>
-</section>
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <img src="images/linkedinprof.jpg" alt="Jacob's Profile" class="profile-image">
+            <h1>Jacob Yosef</h1>
+            <h2>Technical & Systems Designer</h2>
+        </div>
+        <nav>
+            <a href="index.html#projects">Projects</a>
+            <a href="prototypes.html">Prototypes</a>
+            <a href="resume.html">Resume</a>
+            <a href="index.html#about-contact">Contact</a>
+        </nav>
+        <div class="sidebar-bottom">
+            <a href="mailto:jacobyosef98@gmail.com">jacobyosef98@gmail.com</a>
+        </div>
+    </aside>
 
+    <main class="main-content">
+        <div class="project-container">
+            <header class="project-header">
+                <h1>Cosmosis</h1>
+                <div class="project-tags">
+                    <span class="project-tag">Team Project</span>
+                    <span class="project-tag">4 Weeks</span>
+                    <span class="project-tag">Unreal Engine</span>
+                </div>
+            </header>
+
+            <div class="main-visual">
+                <video controls autoplay loop muted playsinline>
+                    <source src="videos/CosmosisTrailer.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Overview Section -->
+            <section class="project-section">
+                <h2>Overview</h2>
+                <p>
+                    Cosmosis is a co-op action-adventure game set in a dystopian, post-apocalyptic world. Blending fast-paced combat with strategic teamwork, the game was designed as a cooperative experience that is also fully playable solo. My primary responsibility was designing and implementing the full roster of enemies and the final boss encounter.
+                </p>
+            </section>
+
+            <!-- Contributions Navigation Section -->
+            <section class="project-section" id="role-and-contributions">
+                <h2>My Role & Contributions</h2>
+                <ul class="roles-list">
+                    <li>Technical Design</li>
+                    <li>Enemy & Boss Design</li>
+                </ul>
+                <div class="contribution-tags">
+                    <a href="#enemies-section" class="contribution-tag">Enemy Design</a>
+                    <a href="#boss-section" class="contribution-tag">Boss Design</a>
+                    <a href="#animation-section" class="contribution-tag">Animation Implementation</a>
+                </div>
+            </section>
+
+            <!-- Enemies Section -->
+            <section class="project-section" id="enemies-section">
+                <h2>Enemies</h2>
+                <div class="feature-showcase">
+                    <div class="feature-text">
+                        <h3>Design Philosophy</h3>
+                        <p>
+                            I began by researching successful top-down combat games like <em>Hades</em> and <em>V Rising</em>. My goal was to avoid a horde-based system and instead focus on fewer, more meaningful enemies. Each enemy was designed to have unique patterns and abilities, requiring players to learn and adapt rather than simply overpowering them through numbers. This approach created more memorable and engaging combat scenarios.
+                        </p>
+                        <h3>Enemy Tiers</h3>
+                        <p>
+                            I designed a tier system (Green, Yellow, Red) to classify the 7 unique enemies based on complexity and difficulty. Green-tier enemies were simple, serving as an introduction and appearing in larger groups. Yellow and Red-tier enemies featured more complex behaviors and a wider range of abilities, such as the ranged 'Summoner' and the gap-closing 'Brute', which was designed specifically to counter player kiting.
+                        </p>
+                        <h3>Abilities</h3>
+                        <p>
+                            My process involved creating each ability within a modular Actor Component Blueprint. A key technical challenge was clearly telegraphing attacks. To solve this efficiently, I developed a reusable telegraph system with an event dispatcher that would signal when the indicator's timer finished. This blueprint exposed variables for size and lifetime, allowing it to be adapted for numerous enemy and player abilities, which saved significant development time.
+                        </p>
+                    </div>
+                    <div class="feature-visual">
+                        <img src="https://via.placeholder.com/400x300.gif/1f1f1f/ffffff?text=Enemy+Showcase" alt="GIF of enemy gameplay">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Boss Section -->
+            <section class="project-section" id="boss-section">
+                <h2>Boss</h2>
+                <div class="feature-text-full">
+                    <h3>Prototyping & Scoping</h3>
+                    <p>
+                        The initial plan included two mini-bosses and a final boss. I began by prototyping a wide range of abilities, focusing on projectiles that could be easily implemented and reused without relying heavily on our busy VFX artist. However, due to unforeseen delays with multiplayer replication and core AI behavior, the team decided to scope down and focus solely on delivering a high-quality final boss. I adapted by repurposing the most compelling abilities I had already created for the mini-bosses and integrating them into the main boss's design.
+                    </p>
+                    <h3>Co-op and Single-Player Design</h3>
+                    <p>
+                        A key challenge was designing abilities that were engaging in co-op but remained fair and balanced for a solo player. I built the boss's abilities in modular Actor Component Blueprints in Unreal Engine. This allowed me to create parameters for variables like projectile count, target selection, and attack patterns. By adjusting these parameters, the same core ability could be easily tweaked to function differently for co-op versus single-player.
+                    </p>
+                </div>
+
+                <!-- Interactive Ability Showcase -->
+                <div class="ability-showcase-interactive">
+                    <h4>Ability: Curving Projectile</h4>
+                    <div class="ability-content">
+                        <div class="ability-visual">
+                            <video class="ability-video sp-video active-video" autoplay loop muted playsinline>
+                                <source src="videos/cosmosis/curving_projectile_single.mp4" type="video/mp4">
+                            </video>
+                            <video class="ability-video coop-video" autoplay loop muted playsinline>
+                                <source src="videos/cosmosis/curving_projectile_coop.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="ability-details">
+                            <div class="mode-selector">
+                                <button class="mode-btn active" data-mode="sp" data-description="In single-player, the boss fires slower projectiles that circle back to the player.">
+                                    Single-Player
+                                </button>
+                                <button class="mode-btn" data-mode="coop" data-description="In co-op, the projectiles target a random player, circle around and accelerate towards the other player.">
+                                    Co-op
+                                </button>
+                            </div>
+                            <p class="ability-description">
+                                In single-player, the boss fires slower projectiles that circle back to the player.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ability-showcase-interactive">
+                    <h4>Ability: Tether</h4>
+                    <div class="ability-content">
+                        <div class="ability-visual">
+                            <video class="ability-video sp-video active-video" autoplay loop muted playsinline>
+                                <source src="videos/cosmosis/tether_single.mp4" type="video/mp4">
+                            </video>
+                            <video class="ability-video coop-video" autoplay loop muted playsinline>
+                                <source src="videos/cosmosis/tether_coop.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="ability-details">
+                            <div class="mode-selector">
+                                <button class="mode-btn active" data-mode="sp" data-description="As a solo player, the boss tethers itself to you, dealing damage over time if you move too far away.">
+                                    Single-Player
+                                </button>
+                                <button class="mode-btn" data-mode="coop" data-description="In co-op mode, you get tethered to your partner. If the tether is stretched too far, it breaks and damages both players.">
+                                    Co-op
+                                </button>
+                            </div>
+                            <p class="ability-description">
+                                As a solo player, the boss tethers itself to you, dealing damage over time if you move too far away.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Interactive Ability Showcase -->
+            </section>
+
+            <!-- Animation Section -->
+            <section class="project-section" id="animation-section">
+                <h2>Animation</h2>
+                <div class="feature-showcase">
+                    <div class="feature-text">
+                        <h3>State Machines & Blendspaces</h3>
+                        <p>
+                            My role extended to implementing animations for most characters and enemies. This involved setting up Animation Blueprints with state machines to handle transitions between idle, moving, attacking, and death states. I utilized blendspaces for the player character to ensure smooth 8-directional movement, and used montage notifies to trigger abilities and damage.
+                        </p>
+                    </div>
+                    <div class="feature-visual">
+                        <img src="https://via.placeholder.com/400x300.gif/1f1f1f/ffffff?text=Animation+System" alt="GIF of animation system">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Scrapped Abilities Section -->
+            <section class="project-section" id="scrapped-abilities">
+                <h2>Scrapped Abilities</h2>
+                <p>During development, several abilities were prototyped but ultimately cut due to time constraints or design changes. This gallery showcases some of that exploratory work.</p>
+                
+                <div class="scrapped-gallery">
+                    <div class="gallery-main-player">
+                        <!-- Two video players for smooth cross-fading -->
+                        <video class="gallery-video active" autoplay loop muted playsinline>
+                            <source src="videos/cosmosis/scrapped1.mp4" type="video/mp4">
+                        </video>
+                        <video class="gallery-video" loop muted playsinline>
+                            <!-- Secondary player for buffering -->
+                        </video>
+                    </div>
+                    <div class="gallery-previews-wrapper">
+                        <div class="gallery-previews">
+                            <div class="preview-item active" data-video-src="videos/cosmosis/scrapped1.mp4">
+                                <video muted playsinline><source src="videos/cosmosis/scrapped1.mp4" type="video/mp4"></video>
+                                <span>Mini-Boss Bladestorm</span>
+                            </div>
+                            <div class="preview-item" data-video-src="videos/cosmosis/scrapped2.mp4">
+                                <video muted playsinline><source src="videos/cosmosis/scrapped2.mp4" type="video/mp4"></video>
+                                <span>Projectile Volleys</span>
+                            </div>
+                            <div class="preview-item" data-video-src="videos/cosmosis/scrapped3.mp4">
+                                <video muted playsinline><source src="videos/cosmosis/scrapped3.mp4" type="video/mp4"></video>
+                                <span>Rotating Projectiles</span>
+                            </div>
+                            <div class="preview-item" data-video-src="videos/cosmosis/scrapped4.mp4">
+                                <video muted playsinline><source src="videos/cosmosis/scrapped4.mp4" type="video/mp4"></video>
+                                <span>Projectile Shooter</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reflection Section -->
+            <section class="project-section" id="reflection-section">
+                <h2>Reflection</h2>
+                <p>
+                    This project was a valuable lesson in scoping and adaptation. Facing technical hurdles with multiplayer and AI forced us to make difficult but necessary decisions, such as cutting the mini-bosses to focus on the final encounter. This taught me to design modularly, as the abilities I had prototyped for the mini-bosses were easily repurposed. I also learned the importance of designing systems, like the reusable telegraph blueprint, that save time and can be leveraged by the entire team. Moving forward, I will place an even greater emphasis on proactive risk assessment and building flexible, scalable gameplay systems from the start.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // Smooth scrolling for contribution links
+        document.querySelectorAll('.contribution-tag').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Back to Top Button Logic
+        const backToTopButton = document.getElementById('back-to-top-btn');
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'auto' // 'auto' for instant scroll
+                });
+            });
+        }
+
+        // Interactive Ability Showcase Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const showcases = document.querySelectorAll('.ability-showcase-interactive');
+
+            showcases.forEach(showcase => {
+                const description = showcase.querySelector('.ability-description');
+                const buttons = showcase.querySelectorAll('.mode-btn');
+                const spVideo = showcase.querySelector('.sp-video');
+                const coopVideo = showcase.querySelector('.coop-video');
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const mode = button.dataset.mode;
+                        let activeVideo, inactiveVideo;
+
+                        if (mode === 'sp') {
+                            activeVideo = spVideo;
+                            inactiveVideo = coopVideo;
+                        } else {
+                            activeVideo = coopVideo;
+                            inactiveVideo = spVideo;
+                        }
+
+                        // Crossfade videos
+                        activeVideo.classList.add('active-video');
+                        inactiveVideo.classList.remove('active-video');
+
+                        // Restart the active video and pause the inactive one
+                        activeVideo.currentTime = 0;
+                        activeVideo.play();
+                        inactiveVideo.pause();
+
+                        // Update description
+                        description.textContent = button.dataset.description;
+
+                        // Update active button
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                    });
+                });
+            });
+
+            // Scrapped Abilities Gallery Logic (Smooth Transition)
+            const galleryContainer = document.querySelector('.gallery-main-player');
+            const previews = document.querySelectorAll('.preview-item');
+
+            if (galleryContainer && previews.length > 0) {
+                const videoPlayers = galleryContainer.querySelectorAll('.gallery-video');
+                let activePlayerIndex = 0; // Track which player is currently visible
+
+                previews.forEach(preview => {
+                    preview.addEventListener('click', () => {
+                        // Prevent clicking the already active item
+                        if (preview.classList.contains('active')) return;
+
+                        const videoSrc = preview.dataset.videoSrc;
+                        
+                        // Determine current and next player
+                        const currentPlayer = videoPlayers[activePlayerIndex];
+                        const nextPlayerIndex = (activePlayerIndex + 1) % 2;
+                        const nextPlayer = videoPlayers[nextPlayerIndex];
+
+                        // Prepare the next player
+                        nextPlayer.src = videoSrc;
+                        nextPlayer.load();
+
+                        // When the next video is ready to play, switch them
+                        // Using 'canplay' ensures we don't switch to a black screen
+                        const playNextVideo = () => {
+                            nextPlayer.play();
+                            
+                            // Crossfade
+                            nextPlayer.classList.add('active');
+                            currentPlayer.classList.remove('active');
+
+                            // Update active index
+                            activePlayerIndex = nextPlayerIndex;
+
+                            // Cleanup old player after transition
+                            setTimeout(() => {
+                                currentPlayer.pause();
+                                currentPlayer.src = ""; // Optional: clear source to save memory
+                            }, 500); // Match CSS transition duration
+
+                            // Remove listener to prevent multiple firings
+                            nextPlayer.removeEventListener('canplay', playNextVideo);
+                        };
+
+                        nextPlayer.addEventListener('canplay', playNextVideo);
+
+                        // Update active preview styling
+                        previews.forEach(p => p.classList.remove('active'));
+                        preview.classList.add('active');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
