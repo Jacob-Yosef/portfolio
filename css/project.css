@@ -1,0 +1,361 @@
+.project-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.main-visual {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 3rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: var(--subtle-shadow);
+}
+
+.main-visual iframe,
+.main-visual video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Project Section styles */
+.project-section {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.project-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.project-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--blue-light);
+}
+
+.project-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--primary-text);
+}
+
+.project-section p {
+    font-size: 1.1rem;
+    color: var(--secondary-text);
+    margin-bottom: 1.5rem;
+    max-width: 75ch; /* Improves readability */
+}
+
+/* New Contribution Section Styles */
+.roles-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 2rem 0;
+}
+
+    .roles-list li {
+        font-size: 1.1rem;
+        color: var(--secondary-text);
+        margin-bottom: 0.75rem;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+
+        .roles-list li::before {
+            content: '\00BB';
+            position: absolute;
+            left: 0;
+            color: var(--blue);
+        }
+
+.contribution-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contribution-tag {
+    background: var(--card-bg);
+    color: var(--primary-text);
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.contribution-tag:hover {
+    background: var(--blue);
+    border-color: var(--blue);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+}
+
+.feature-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.feature-text-full {
+    margin-bottom: 2rem;
+}
+
+.feature-showcase.reverse {
+    grid-template-columns: 1fr 1fr;
+}
+
+.feature-showcase.reverse .feature-text {
+    order: 2;
+}
+
+.feature-showcase.reverse .feature-visual {
+    order: 1;
+}
+
+.feature-visual video, .feature-visual img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+/* --- Interactive Ability Showcase --- */
+.ability-showcase-interactive {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+    .ability-showcase-interactive h4 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        background: var(--accent-bg);
+        border-bottom: 1px solid var(--border);
+        margin: 0;
+    }
+
+.ability-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+.ability-visual {
+    position: relative;
+    min-height: 250px;
+}
+
+.ability-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.ability-video.active-video {
+    opacity: 1;
+    z-index: 1;
+}
+
+.ability-details {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+    .detail-item i {
+        font-size: 1.2rem;
+        color: var(--blue);
+    }
+
+    .detail-item span {
+        font-size: 1rem;
+        color: var(--primary-text);
+        line-height: 1.4;
+    }
+
+.mode-selector {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.mode-btn {
+    background: var(--card-bg);
+    color: var(--secondary-text);
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+    .mode-btn:hover {
+        background: var(--accent-bg);
+        color: var(--primary-text);
+    }
+
+    .mode-btn.active {
+        background: var(--blue);
+        border-color: var(--blue);
+        color: var(--primary-text);
+        box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+        transform: translateY(-2px);
+    }
+
+.ability-description {
+    font-size: 1rem;
+    color: var(--secondary-text);
+    line-height: 1.6;
+    min-height: 80px; /* Prevents layout shift when description length changes */
+}
+
+/* Scrapped Abilities Gallery */
+#scrapped-abilities {
+    border-bottom: none; /* No border on the last main section */
+}
+
+.scrapped-gallery {
+    margin-top: 2rem;
+}
+
+.gallery-main-player {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--subtle-shadow);
+    background: #000;
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio to prevent layout shift */
+}
+
+.gallery-main-player video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.gallery-main-player video.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.gallery-previews-wrapper {
+    position: relative;
+    margin-top: 1rem;
+}
+
+.gallery-previews {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--blue) var(--primary-bg);
+}
+
+    .gallery-previews::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .gallery-previews::-webkit-scrollbar-track {
+        background: var(--accent-bg);
+        border-radius: 4px;
+    }
+
+    .gallery-previews::-webkit-scrollbar-thumb {
+        background-color: var(--blue);
+        border-radius: 4px;
+    }
+
+.preview-item {
+    flex: 0 0 180px; /* Prevent shrinking, set a fixed base width */
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    background: #000;
+}
+
+    .preview-item:hover {
+        border-color: var(--blue-light);
+        transform: translateY(-4px);
+    }
+
+    .preview-item.active {
+        border-color: var(--blue);
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+    }
+
+    .preview-item video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .preview-item span {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        color: var(--primary-text);
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 0.5rem;
+        text-align: center;
+        transition: background 0.3s ease;
+    }
+
+    .preview-item:hover span {
+        background: rgba(59, 130, 246, 0.7);
+    }
+/*# sourceMappingURL=project.css.map */

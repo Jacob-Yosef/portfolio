@@ -1,0 +1,269 @@
+:root {
+    /* Clean blue/grey/orange palette */
+    --primary-bg: #0f0f0f;
+    --secondary-bg: #1a1a1a;
+    --accent-bg: #262626;
+    --card-bg: #1f1f1f;
+    --border: #404040;
+    /* Text colors */
+    --primary-text: #ffffff;
+    --secondary-text: #b3b3b3;
+    --accent-text: #737373;
+    /* Accent colors */
+    --blue: #3b82f6;
+    --blue-dark: #2563eb;
+    --blue-light: #60a5fa;
+    --blue-muted: rgba(59, 130, 246, 0.1);
+    --orange: #f97316;
+    --orange-dark: #ea580c;
+    --orange-muted: rgba(249, 115, 22, 0.1);
+    /* Layout variables */
+    --max-width: 1400px;
+    --subtle-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --sidebar-width: 450px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--primary-bg);
+    color: var(--primary-text);
+    overflow-x: hidden;
+    line-height: 1.6;
+    display: flex;
+}
+
+    /* Subtle background texture */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(circle at 25% 25%, var(--blue-muted) 0%, transparent 50%), radial-gradient(circle at 75% 75%, var(--orange-muted) 0%, transparent 50%);
+        pointer-events: none;
+        z-index: -1;
+        transition: all 0.4s ease;
+    }
+
+/* New Sidebar Layout */
+.sidebar {
+    width: var(--sidebar-width);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: var(--secondary-bg);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    text-align: center;
+    z-index: 100;
+}
+
+.sidebar-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+.sidebar .profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--border);
+    box-shadow: var(--subtle-shadow);
+    margin-bottom: 0.5rem;
+}
+
+.sidebar h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--blue-light), var(--blue));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.sidebar h2 {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    color: var(--secondary-text);
+    font-weight: 400;
+    margin: 0;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+    .sidebar nav a {
+        color: var(--secondary-text);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+        .sidebar nav a:hover {
+            color: var(--primary-text);
+            transform: translateX(5px);
+        }
+
+.sidebar-bottom a {
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+    .sidebar-bottom a:hover {
+        color: var(--blue-light);
+    }
+
+.main-content {
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+    padding: 0;
+    overflow-y: auto;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Section dividers */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--blue) 50%, transparent 100%);
+    margin: 0;
+    border: none;
+}
+
+/* Style override for project pages */
+.project-page-body::before {
+    background-image: radial-gradient(circle at 25% 25%, var(--blue-muted) 0%, transparent 60%), radial-gradient(circle at 80% 20%, var(--blue-muted) 0%, transparent 40%);
+    opacity: 0.7;
+}
+
+/* Page load animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    body {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+        .sidebar nav a {
+            font-size: 0.85rem;
+        }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 4px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--blue-dark);
+    }
+
+/* --- Back to Top Button --- */
+.back-to-top {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(31, 31, 31, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--primary-text);
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+    .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%);
+    }
+
+    .back-to-top:hover {
+        background: var(--blue);
+        color: var(--primary-text);
+        border-color: var(--blue);
+    }
+
+    .back-to-top svg {
+        width: 16px;
+        height: 16px;
+    }
