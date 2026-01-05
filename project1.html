@@ -43,19 +43,22 @@
                 </div>
             </header>
 
-            <div class="main-visual">
-                <video controls autoplay loop muted playsinline>
-                    <source src="videos/CosmosisTrailer.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-
             <!-- Overview Section -->
             <section class="project-section">
                 <h2>Overview</h2>
-                <p>
-                    Cosmosis is a co-op action-adventure game set in a dystopian, post-apocalyptic world. Blending fast-paced combat with strategic teamwork, the game was designed as a cooperative experience that is also fully playable solo. My primary responsibility was designing and implementing the full roster of enemies and the final boss encounter.
-                </p>
+                <div class="feature-showcase">
+                    <div class="feature-text">
+                        <p>
+                            Cosmosis is a co-op action-adventure game set in a dystopian, post-apocalyptic world. Blending fast-paced combat with strategic teamwork, the game was designed as a cooperative experience that is also fully playable solo. My primary responsibility was designing and implementing the full roster of enemies and the final boss encounter.
+                        </p>
+                    </div>
+                    <div class="main-visual" style="margin-bottom: 0;">
+                        <video controls autoplay loop muted playsinline>
+                            <source src="videos/CosmosisTrailer.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
             </section>
 
             <!-- Contributions Navigation Section -->
@@ -87,20 +90,14 @@
                     </div>
                 </div>
 
-                <div class="project-section-grid" aria-label="Enemy tiers section">
-                    <div>
+                <div class="feature-showcase reverse">
+                    <div class="feature-text">
                         <h3>Enemy Tiers</h3>
                         <p>
                             I designed a tier system (<span class="tier-green">Green</span>, <span class="tier-yellow">Yellow</span>, <span class="tier-red">Red</span>) to classify the 7 unique enemies based on complexity and difficulty. <span class="tier-green">Green</span>-tier enemies were simple, serving as an introduction and appearing in larger groups. <span class="tier-yellow">Yellow</span> and <span class="tier-red">Red</span>-tier enemies were designed for more complex behaviors and a wider range of abilities, such as the 'Summoner' and the beefier 'Brute' enemy.
                         </p>
                     </div>
-
-                    <!-- Optional: second column for a small callout, or leave empty for breathing room -->
-                    <div>
-                        <!-- Intentionally blank to keep a clean 2-column rhythm -->
-                    </div>
-
-                    <div class="full-width-visual grid-span-2">
+                    <div class="feature-visual">
                         <img src="images/cosmosis/enemytiers.png" alt="A diagram showing the Green, Yellow, and Red enemy tiers.">
                     </div>
                 </div>
@@ -263,6 +260,11 @@
         </div>
     </main>
 
+    <!-- Lightbox container -->
+    <div id="lightbox-overlay" class="lightbox-overlay">
+        <img id="lightbox-image" class="lightbox-content" src="" alt="Enlarged view">
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Smooth scrolling for contribution links + brief subtitle highlight
@@ -298,6 +300,24 @@
                     }, 500); // 0.5 second delay
                 });
             });
+
+            // --- Image Lightbox Logic ---
+            const lightboxOverlay = document.getElementById('lightbox-overlay');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const imagesToEnlarge = document.querySelectorAll('.feature-visual img, .full-width-visual img');
+
+            imagesToEnlarge.forEach(img => {
+                img.addEventListener('click', () => {
+                    lightboxImage.src = img.src;
+                    lightboxOverlay.classList.add('visible');
+                });
+            });
+
+            // Hide lightbox when clicking on the overlay
+            lightboxOverlay.addEventListener('click', () => {
+                lightboxOverlay.classList.remove('visible');
+            });
+
 
             // Interactive Ability Showcase Logic
             const showcases = document.querySelectorAll('.ability-showcase-interactive');

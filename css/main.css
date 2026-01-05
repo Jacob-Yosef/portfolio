@@ -20,7 +20,7 @@
     /* Layout variables */
     --max-width: 1400px;
     --subtle-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    --sidebar-width: 450px;
+    --sidebar-width: 320px;
 }
 
 * {
