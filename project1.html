@@ -106,7 +106,7 @@
                     </p>
                     <h3>Elemental Counterplay (Planned)</h3>
                     <p>
-                        A core mechanic of <em>Cosmosis</em> involves players rotating between elemental stars to imbue their attacks with different properties. To integrate this into the enemy design, I conceptualized a system where high-tier enemies would channel powerful abilities marked by a specific elemental icon. Players would need to identify the element and strike with a matching ability to interrupt the cast and stun the enemy. Although time constraints prevented its final implementation, this system was designed to deepen combat by rewarding observation and quick elemental switching.
+                        A core mechanic of <em>Cosmosis</em> involves players rotating between different stars to imbue their attacks with different elements. To integrate this into the enemy design, I conceptualized a system where high-tier enemies and bosses would channel powerful abilities marked by a specific elemental icon. Players would need to hit the enemy with an ability matching that element, to interrupt the cast and stun the enemy. Although time constraints prevented its final implementation, this system was designed to compliment this elemental combat system and reward players for mastering it.
                     </p>
                 </div>
             </section>
@@ -117,15 +117,21 @@
                 <div class="feature-text-full">
                     <h3>Prototyping & Scoping</h3>
                     <!--<p>
-                        The initial plan included two mini-bosses and a final boss. I began by prototyping a wide range of abilities, focusing on projectiles that could be easily implemented and reused without relying heavily on our busy VFX artist. However, due to unforeseen delays with multiplayer replication and core AI behavior, the team decided to scope down and focus solely on delivering a high-quality final boss. I adapted by repurposing the most compelling abilities I had already created for the mini-bosses and integrating them into the main boss's design.
+                        The initial plan included two mini-bosses and a final boss. I began by prototyping a wide range of abilities, focusing on projectiles that could
+                        be easily implemented and reused without relying heavily on our busy VFX artist.
+                        However, due to unforeseen delays with multiplayer replication and core AI behavior, the team decided to scope down and focus solely on delivering a high-quality final boss. 
+                        I adapted by repurposing the most compelling abilities I had already created for the mini-bosses and integrating them into the main boss's design.
                     </p>-->
                     <h3>Structure & Phasing</h3>
                     <!--<p>
-                        The boss fight is structured into distinct phases to create a compelling flow of tension and release. As the boss's health depletes, it transitions between phases, unlocking more aggressive patterns and complex mechanics. To complement the players' extensive Area of Effect (AoE) toolkit, I implemented enemy spawning phases. These waves of lower-tier enemies force players to manage crowd control while dealing with the boss, ensuring that AoE abilities remain valuable throughout the single-target encounter.
+                        With very little time to design and implement the boss, I opted for a straightforward three-phase structure.
+                        The first phase icluded 3 main abilities and 2 minor abilities. The minor abilities were designed to be easier to deal with, but
                     </p>-->
                     <h3>Co-op and Single-Player Design</h3>
                     <p>
-                        A key challenge was designing abilities that were engaging in co-op but remained fair and balanced for a solo player. I built the boss's abilities in modular Actor Component Blueprints in Unreal Engine. This allowed me to create parameters for variables like projectile count, target selection, and attack patterns. By adjusting these parameters, the same core ability could be easily tweaked to function differently for co-op versus single-player.
+                        A key challenge was designing abilities that were engaging in co-op but remained fair and balanced for a solo player.
+                        I built the boss's abilities in modular Actor Component Blueprints in Unreal Engine. This allowed me to create parameters for variables like projectile count,
+                        target selection, and attack patterns. By adjusting these parameters, the same core ability could be easily tweaked to function differently for co-op versus single-player.
                     </p>
 
                 </div>
@@ -252,7 +258,7 @@
     </main>
 
     <script>
-        // Smooth scrolling for contribution links
+        // Smooth scrolling for contribution links with subtitle highlighting
         document.querySelectorAll('.contribution-tag').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();

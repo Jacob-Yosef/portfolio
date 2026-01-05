@@ -95,27 +95,41 @@
 }
 
 .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 0.8rem 1.5rem;
+    align-items: center;
+    justify-content: start;
 }
 
 .project-tag {
-    background: var(--accent-bg);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     color: var(--secondary-text);
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
-    border-radius: 6px;
-    border: 1px solid var(--border);
-    transition: all 0.2s ease;
+    background: none;
+    border: none;
+    padding: 0;
+    border-radius: 0;
 }
 
-    .project-tag:hover {
-        background: var(--blue-muted);
-        color: var(--blue-light);
-        border-color: var(--blue);
-    }
+.project-tag svg {
+    width: 40px;
+    height: 40px;
+    stroke-width: 2;
+    color: var(--blue-light);
+    flex-shrink: 0;
+}
+
+.project-tag img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: brightness(0) saturate(100%) invert(64%) sepia(98%) saturate(1537%) hue-rotate(193deg) brightness(101%) contrast(92%);
+}
 
 .project-contributions {
     flex: 0 0 40%;
@@ -292,5 +306,41 @@
         border-left: none;
         padding-top: 4rem;
         border-top: 1px solid var(--border);
+    }
+    .project-tags {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 0.8rem 1.5rem;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .project-tag {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        color: var(--secondary-text);
+        font-size: 0.9rem;
+        font-weight: 500;
+        background: none;
+        border: none;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .project-tag svg {
+        width: 40px;
+        height: 40px;
+        stroke-width: 2;
+        color: var(--blue-light);
+        flex-shrink: 0;
+    }
+
+    .project-tag img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        flex-shrink: 0;
+        filter: brightness(0) saturate(100%) invert(64%) sepia(98%) saturate(1537%) hue-rotate(193deg) brightness(101%) contrast(92%);
     }
 }

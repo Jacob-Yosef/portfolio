@@ -98,11 +98,15 @@ body {
     margin: 0;
 }
 
-.sidebar h2 {
-    font-size: clamp(1rem, 2.5vw, 1.1rem);
-    color: var(--secondary-text);
+.sidebar-top h2 {
+    font-size: 1rem;
     font-weight: 400;
-    margin: 0;
+    color: var(--secondary-text);
+}
+
+/* Remove underline from sidebar profile link */
+.sidebar-top-link {
+    text-decoration: none;
 }
 
 .sidebar nav {

@@ -158,6 +158,27 @@
 .tier-yellow { color: #facc15; font-weight: 600; }
 .tier-red { color: #f87171; font-weight: 600; }
 
+/* Highlight animation for subtitles */
+@keyframes subtitle-highlight {
+    0% {
+        color: var(--primary-text);
+    }
+    50% {
+        color: #ff8c42;
+    }
+    100% {
+        color: var(--primary-text);
+    }
+}
+
+.project-section h3.highlight {
+    animation: subtitle-highlight 1.5s ease-in-out;
+}
+
+.project-section h4.highlight {
+    animation: subtitle-highlight 1.5s ease-in-out;
+}
+
 /* --- Interactive Ability Showcase --- */
 .ability-showcase-interactive {
     background: var(--card-bg);
