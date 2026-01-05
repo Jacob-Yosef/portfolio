@@ -18,7 +18,7 @@
     --orange-dark: #ea580c;
     --orange-muted: rgba(249, 115, 22, 0.1);
     /* Layout variables */
-    --max-width: 1400px;
+    --max-width: 1200px;
     --subtle-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     --sidebar-width: 320px;
 }
