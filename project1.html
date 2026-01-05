@@ -87,14 +87,20 @@
                     </div>
                 </div>
 
-                <div class="feature-showcase reverse">
-                    <div class="feature-text">
+                <div class="project-section-grid" aria-label="Enemy tiers section">
+                    <div>
                         <h3>Enemy Tiers</h3>
                         <p>
                             I designed a tier system (<span class="tier-green">Green</span>, <span class="tier-yellow">Yellow</span>, <span class="tier-red">Red</span>) to classify the 7 unique enemies based on complexity and difficulty. <span class="tier-green">Green</span>-tier enemies were simple, serving as an introduction and appearing in larger groups. <span class="tier-yellow">Yellow</span> and <span class="tier-red">Red</span>-tier enemies were designed for more complex behaviors and a wider range of abilities, such as the 'Summoner' and the beefier 'Brute' enemy.
                         </p>
                     </div>
-                    <div class="full-width-visual">
+
+                    <!-- Optional: second column for a small callout, or leave empty for breathing room -->
+                    <div>
+                        <!-- Intentionally blank to keep a clean 2-column rhythm -->
+                    </div>
+
+                    <div class="full-width-visual grid-span-2">
                         <img src="images/cosmosis/enemytiers.png" alt="A diagram showing the Green, Yellow, and Red enemy tiers.">
                     </div>
                 </div>
@@ -258,45 +264,43 @@
     </main>
 
     <script>
-        // Smooth scrolling for contribution links with subtitle highlighting
-        document.querySelectorAll('.contribution-tag').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scrolling for contribution links + brief subtitle highlight
+            document.querySelectorAll('.contribution-tag').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (!targetElement) return;
+
                     targetElement.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
-                }
-            });
-        });
 
-        // Back to Top Button Logic
-        const backToTopButton = document.getElementById('back-to-top-btn');
-        if (backToTopButton) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    backToTopButton.classList.add('visible');
-                } else {
-                    backToTopButton.classList.remove('visible');
-                }
-            });
+                    // Wait for 500ms (0.5s) before applying the highlight
+                    setTimeout(() => {
+                        const subtitles = targetElement.querySelectorAll('h3, h4');
+                        if (subtitles.length === 0) return;
 
-            backToTopButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'auto' // 'auto' for instant scroll
+                        subtitles.forEach(subtitle => {
+                            // Restart the animation reliably on each subtitle
+                            subtitle.classList.remove('highlight');
+                            void subtitle.offsetWidth; // force reflow so animation can replay
+                            subtitle.classList.add('highlight');
+
+                            // Remove the class after the animation so it can be triggered again
+                            setTimeout(() => {
+                                subtitle.classList.remove('highlight');
+                            }, 1600); // match CSS (1.5s) + small buffer
+                        });
+                    }, 500); // 0.5 second delay
                 });
             });
-        }
 
-        // Interactive Ability Showcase Logic
-        document.addEventListener('DOMContentLoaded', () => {
+            // Interactive Ability Showcase Logic
             const showcases = document.querySelectorAll('.ability-showcase-interactive');
-
             showcases.forEach(showcase => {
                 const description = showcase.querySelector('.ability-description');
                 const buttons = showcase.querySelectorAll('.mode-btn');
@@ -316,19 +320,15 @@
                             inactiveVideo = spVideo;
                         }
 
-                        // Crossfade videos
                         activeVideo.classList.add('active-video');
                         inactiveVideo.classList.remove('active-video');
 
-                        // Restart the active video and pause the inactive one
                         activeVideo.currentTime = 0;
                         activeVideo.play();
                         inactiveVideo.pause();
 
-                        // Update description
                         description.textContent = button.dataset.description;
 
-                        // Update active button
                         buttons.forEach(btn => btn.classList.remove('active'));
                         button.classList.add('active');
                     });
@@ -341,55 +341,65 @@
 
             if (galleryContainer && previews.length > 0) {
                 const videoPlayers = galleryContainer.querySelectorAll('.gallery-video');
-                let activePlayerIndex = 0; // Track which player is currently visible
+                let activePlayerIndex = 0;
 
                 previews.forEach(preview => {
                     preview.addEventListener('click', () => {
-                        // Prevent clicking the already active item
                         if (preview.classList.contains('active')) return;
 
                         const videoSrc = preview.dataset.videoSrc;
-                        
-                        // Determine current and next player
+
                         const currentPlayer = videoPlayers[activePlayerIndex];
                         const nextPlayerIndex = (activePlayerIndex + 1) % 2;
                         const nextPlayer = videoPlayers[nextPlayerIndex];
 
-                        // Prepare the next player
                         nextPlayer.src = videoSrc;
                         nextPlayer.load();
 
-                        // When the next video is ready to play, switch them
-                        // Using 'canplay' ensures we don't switch to a black screen
                         const playNextVideo = () => {
                             nextPlayer.play();
-                            
-                            // Crossfade
+
                             nextPlayer.classList.add('active');
                             currentPlayer.classList.remove('active');
 
-                            // Update active index
                             activePlayerIndex = nextPlayerIndex;
 
-                            // Cleanup old player after transition
                             setTimeout(() => {
                                 currentPlayer.pause();
-                                currentPlayer.src = ""; // Optional: clear source to save memory
-                            }, 500); // Match CSS transition duration
+                                currentPlayer.src = "";
+                            }, 500);
 
-                            // Remove listener to prevent multiple firings
                             nextPlayer.removeEventListener('canplay', playNextVideo);
                         };
 
                         nextPlayer.addEventListener('canplay', playNextVideo);
 
-                        // Update active preview styling
                         previews.forEach(p => p.classList.remove('active'));
                         preview.classList.add('active');
                     });
                 });
             }
         });
+
+        // Back to Top Button Logic
+        const backToTopButton = document.getElementById('back-to-top-btn');
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'auto'
+                });
+            });
+        }
     </script>
 </body>
 </html>

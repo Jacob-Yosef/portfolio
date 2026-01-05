@@ -171,10 +171,8 @@
     }
 }
 
-.project-section h3.highlight {
-    animation: subtitle-highlight 1.5s ease-in-out;
-}
-
+.project-section h2.highlight,
+.project-section h3.highlight,
 .project-section h4.highlight {
     animation: subtitle-highlight 1.5s ease-in-out;
 }
