@@ -79,20 +79,35 @@
                     <div class="feature-text">
                         <h3>Design Philosophy</h3>
                         <p>
-                            I began by researching successful top-down combat games like <em>Hades</em> and <em>V Rising</em>. My goal was to avoid a horde-based system and instead focus on fewer, more meaningful enemies. Each enemy was designed to have unique patterns and abilities, requiring players to learn and adapt rather than simply overpowering them through numbers. This approach created more memorable and engaging combat scenarios.
-                        </p>
-                        <h3>Enemy Tiers</h3>
-                        <p>
-                            I designed a tier system (Green, Yellow, Red) to classify the 7 unique enemies based on complexity and difficulty. Green-tier enemies were simple, serving as an introduction and appearing in larger groups. Yellow and Red-tier enemies featured more complex behaviors and a wider range of abilities, such as the ranged 'Summoner' and the gap-closing 'Brute', which was designed specifically to counter player kiting.
-                        </p>
-                        <h3>Abilities</h3>
-                        <p>
-                            My process involved creating each ability within a modular Actor Component Blueprint. A key technical challenge was clearly telegraphing attacks. To solve this efficiently, I developed a reusable telegraph system with an event dispatcher that would signal when the indicator's timer finished. This blueprint exposed variables for size and lifetime, allowing it to be adapted for numerous enemy and player abilities, which saved significant development time.
+                            I began by researching successful top-down combat games like <em>Hades</em> and <em>V Rising</em>. My goal was to avoid a horde-based system and instead focus on fewer, more meaningful enemies. Each enemy was designed to have slightly unique patterns and abilities, requiring players to actually learn how some of them work.
                         </p>
                     </div>
                     <div class="feature-visual">
                         <img src="https://via.placeholder.com/400x300.gif/1f1f1f/ffffff?text=Enemy+Showcase" alt="GIF of enemy gameplay">
                     </div>
+                </div>
+
+                <div class="feature-showcase reverse">
+                    <div class="feature-text">
+                        <h3>Enemy Tiers</h3>
+                        <p>
+                            I designed a tier system (<span class="tier-green">Green</span>, <span class="tier-yellow">Yellow</span>, <span class="tier-red">Red</span>) to classify the 7 unique enemies based on complexity and difficulty. <span class="tier-green">Green</span>-tier enemies were simple, serving as an introduction and appearing in larger groups. <span class="tier-yellow">Yellow</span> and <span class="tier-red">Red</span>-tier enemies were designed for more complex behaviors and a wider range of abilities, such as the 'Summoner' and the beefier 'Brute' enemy.
+                        </p>
+                    </div>
+                    <div class="full-width-visual">
+                        <img src="images/cosmosis/enemytiers.png" alt="A diagram showing the Green, Yellow, and Red enemy tiers.">
+                    </div>
+                </div>
+
+                <div class="feature-text-full">
+                    <h3>Abilities</h3>
+                    <p>
+                        My process involved creating each ability within a modular Actor Component Blueprint. A key technical challenge was clearly telegraphing attacks. To solve this efficiently, I developed a reusable telegraph system with an event dispatcher that would signal when the indicator's timer finished. This blueprint exposed variables for size and lifetime, allowing it to be adapted for numerous enemy and player abilities, which saved significant development time.
+                    </p>
+                    <h3>Elemental Counterplay (Planned)</h3>
+                    <p>
+                        A core mechanic of <em>Cosmosis</em> involves players rotating between elemental stars to imbue their attacks with different properties. To integrate this into the enemy design, I conceptualized a system where high-tier enemies would channel powerful abilities marked by a specific elemental icon. Players would need to identify the element and strike with a matching ability to interrupt the cast and stun the enemy. Although time constraints prevented its final implementation, this system was designed to deepen combat by rewarding observation and quick elemental switching.
+                    </p>
                 </div>
             </section>
 
@@ -101,13 +116,18 @@
                 <h2>Boss</h2>
                 <div class="feature-text-full">
                     <h3>Prototyping & Scoping</h3>
-                    <p>
+                    <!--<p>
                         The initial plan included two mini-bosses and a final boss. I began by prototyping a wide range of abilities, focusing on projectiles that could be easily implemented and reused without relying heavily on our busy VFX artist. However, due to unforeseen delays with multiplayer replication and core AI behavior, the team decided to scope down and focus solely on delivering a high-quality final boss. I adapted by repurposing the most compelling abilities I had already created for the mini-bosses and integrating them into the main boss's design.
-                    </p>
+                    </p>-->
+                    <h3>Structure & Phasing</h3>
+                    <!--<p>
+                        The boss fight is structured into distinct phases to create a compelling flow of tension and release. As the boss's health depletes, it transitions between phases, unlocking more aggressive patterns and complex mechanics. To complement the players' extensive Area of Effect (AoE) toolkit, I implemented enemy spawning phases. These waves of lower-tier enemies force players to manage crowd control while dealing with the boss, ensuring that AoE abilities remain valuable throughout the single-target encounter.
+                    </p>-->
                     <h3>Co-op and Single-Player Design</h3>
                     <p>
                         A key challenge was designing abilities that were engaging in co-op but remained fair and balanced for a solo player. I built the boss's abilities in modular Actor Component Blueprints in Unreal Engine. This allowed me to create parameters for variables like projectile count, target selection, and attack patterns. By adjusting these parameters, the same core ability could be easily tweaked to function differently for co-op versus single-player.
                     </p>
+
                 </div>
 
                 <!-- Interactive Ability Showcase -->
@@ -186,8 +206,8 @@
             <!-- Scrapped Abilities Section -->
             <section class="project-section" id="scrapped-abilities">
                 <h2>Scrapped Abilities</h2>
-                <p>During development, several abilities were prototyped but ultimately cut due to time constraints or design changes. This gallery showcases some of that exploratory work.</p>
-                
+                <p>During development, I prototyped over 30 abilities, giving most enemies and the boss more abilities than they needed. This was so that me and the design team could discuss and test different ability combinations in order to find the right fit, and as a result, a lot of abilities were ultimately cut. Here are some of those abilities.</p>
+
                 <div class="scrapped-gallery">
                     <div class="gallery-main-player">
                         <!-- Two video players for smooth cross-fading -->
@@ -224,9 +244,9 @@
             <!-- Reflection Section -->
             <section class="project-section" id="reflection-section">
                 <h2>Reflection</h2>
-                <p>
+                <!--<p>
                     This project was a valuable lesson in scoping and adaptation. Facing technical hurdles with multiplayer and AI forced us to make difficult but necessary decisions, such as cutting the mini-bosses to focus on the final encounter. This taught me to design modularly, as the abilities I had prototyped for the mini-bosses were easily repurposed. I also learned the importance of designing systems, like the reusable telegraph blueprint, that save time and can be leveraged by the entire team. Moving forward, I will place an even greater emphasis on proactive risk assessment and building flexible, scalable gameplay systems from the start.
-                </p>
+                </p>-->
             </section>
         </div>
     </main>
