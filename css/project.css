@@ -458,6 +458,8 @@
 
 /* === ADDED FOR BLUEPRINT VIEWER === */
 .blueprint-container {
+    /* Overrides the max-width of feature-text-full for blueprint sections */
+    max-width: 1000px;
     margin: 2rem auto;
     text-align: center;
 }
@@ -466,21 +468,23 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: #2a2a2a;
-    color: #E0E0E0;
-    padding: 0.7rem 1.5rem;
+    background-color: #ff8c42; /* Changed to orange */
+    color: #121212; /* Dark text for better contrast on orange */
+    padding: 0.8rem 1.6rem;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600; /* Made text bolder */
     transition: all 0.3s;
-    border: 1px solid #444;
+    border: 1px solid #ff8c42;
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 140, 66, 0.2);
 }
 
 .blueprint-toggle:hover {
-    background-color: #3a3a3a;
-    color: #FFFFFF;
+    background-color: #ff9d5c;
+    border-color: #ff9d5c;
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 140, 66, 0.3);
 }
 
 .blueprint-viewer {
@@ -567,3 +571,12 @@
 .feature-text-full {
     max-width: 800px;
     margin: 0 auto 3rem auto;
+    text-align: left;
+}
+
+.feature-text-full h3 {
+    text-align: left;
+    border-bottom: none;
+    display: block;
+    margin-top: 2rem;
+}

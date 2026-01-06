@@ -148,6 +148,12 @@
                     <p>
                         My process involved creating each ability within a modular Actor Component Blueprint. A key technical challenge was clearly telegraphing attacks. To solve this efficiently, I developed a reusable telegraph system with an event dispatcher that would signal when the indicator's timer finished. This blueprint exposed variables for size and lifetime, allowing it to be adapted for numerous enemy and player abilities, which saved significant development time.
                     </p>
+                    <div class="blueprint-container">
+                        <a class="blueprint-toggle" data-show-text="View Ability Blueprint" data-hide-text="Hide Blueprint">View Ability Blueprint</a>
+                        <div class="blueprint-viewer">
+                            <iframe src="https://blueprintue.com/render/3-yxdwpn/" scrolling="no" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="feature-showcase">
@@ -185,7 +191,7 @@
                         <li><strong>Phase 3</strong><br>At 50% health, the encounter ramps up in intensity: abilities trigger more frequently and receive simple buffs (e.g., faster projectiles, increased number of attacks) to create pressure without introducing anything new.</li>
                     </ul>
                     <div class="blueprint-container">
-                        <a class="blueprint-toggle">View BP_Boss</a>
+                        <a class="blueprint-toggle" data-show-text="View Boss Blueprint" data-hide-text="Hide Blueprint">View Boss Blueprint</a>
                         <div class="blueprint-viewer">
                             <iframe src="https://blueprintue.com/render/t8bjxryp/" scrolling="no" allowfullscreen></iframe>
                         </div>
@@ -380,19 +386,17 @@
 
 
             // Blueprint Viewer Logic
-            const blueprintToggle = document.querySelector('.blueprint-toggle');
-            const blueprintViewer = document.querySelector('.blueprint-viewer');
+            document.querySelectorAll('.blueprint-toggle').forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const viewer = toggle.closest('.blueprint-container').querySelector('.blueprint-viewer');
 
-            if (blueprintToggle && blueprintViewer) {
-                blueprintToggle.addEventListener('click', () => {
-                    blueprintViewer.classList.toggle('visible');
-                    if (blueprintViewer.classList.contains('visible')) {
-                        blueprintToggle.textContent = 'Hide Blueprint';
-                    } else {
-                        blueprintToggle.textContent = 'View BP_Boss';
+                    if (viewer) {
+                        const isVisible = viewer.classList.toggle('visible');
+                        toggle.textContent = isVisible ? toggle.dataset.hideText : toggle.dataset.showText;
                     }
                 });
-            }
+            });
 
             // Enemy Showcase Gallery Logic
             const enemyGalleryContainer = document.querySelector('.enemy-showcase-gallery .gallery-main-player');
