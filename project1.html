@@ -129,22 +129,30 @@
                 <h2>Boss</h2>
                 <div class="feature-text-full">
                     <h3>Prototyping & Scoping</h3>
-                    <!--<p>
-                        The initial plan included two mini-bosses and a final boss. I began by prototyping a wide range of abilities, focusing on projectiles that could
-                        be easily implemented and reused without relying heavily on our busy VFX artist.
-                        However, due to unforeseen delays with multiplayer replication and core AI behavior, the team decided to scope down and focus solely on delivering a high-quality final boss. 
-                        I adapted by repurposing the most compelling abilities I had already created for the mini-bosses and integrating them into the main boss's design.
-                    </p>-->
+                    <p>
+                        This boss was developed late in production with limited time, and our programmers were very busy at the time. I had already made the abilities but we decided that I would take responsibility for creating the AI behavior (e.g., choice of abilities, phase shifting) as well. The setup wasn’t perfectly structured but it got the job done.
+                    </p>
                     <h3>Structure & Phasing</h3>
-                    <!--<p>
-                        With very little time to design and implement the boss, I opted for a straightforward three-phase structure.
-                        The first phase icluded 3 main abilities and 2 minor abilities. The minor abilities were designed to be easier to deal with, but
-                    </p>-->
+                    <p>
+                        I decided to design the boss as a standard three-phase encounter with a short intermission.
+                    </p>
+                    <ul>
+                        <li><strong>Phase 1</strong><br>The fight opens with a limited set of abilities, giving players space to learn the boss’s core mechanics without being overwhelmed.</li>
+                        <li><strong>Intermission</strong><br>At 50% health, the boss becomes untargetable and spawns waves of enemies while slowly regenerating health. Phase 2 begins either when all enemy adds are defeated or when the boss reaches full health, rewarding players for finishing off the enemies quickly.</li>
+                        <li><strong>Phase 2</strong><br>The boss gains an additional ability, and enemies continue spawning throughout the phase. I decided to lean into an add fight to match the player’s kit, which has a lot of Area of Effect abilities. With a pure single target fight, the majority of the player abilities would feel underutilized.</li>
+                        <li><strong>Phase 3</strong><br>At 50% health, the encounter ramps up in intensity: abilities trigger more frequently and receive simple buffs (e.g., faster projectiles, increased number of attacks) to create pressure without introducing anything new.</li>
+                    </ul>
+                    <div class="blueprint-container">
+                        <a class="blueprint-toggle">View BP_Boss</a>
+                        <div class="blueprint-viewer">
+                            <iframe src="https://blueprintue.com/render/t8bjxryp/" scrolling="no" allowfullscreen></iframe>
+                        </div>
+                    </div>
                     <h3>Co-op and Single-Player Design</h3>
                     <p>
                         A fun challenge was designing abilities that were engaging in co-op but could be tweaked to work for a solo player as well.
-                        I built all the ability components with modularity in mind so for some abilities, we could just adjust some variables such as attack count, speed, size etc.
-                        For other abilities though, the logic had to be slightly altered. I tried to do this in a way that still remained fair and balanced.
+                        I built all the ability components with flexibility in mind so for some abilities, we could simply adjust some variables such as attack count, speed, size etc.
+                        For other abilities though, the logic had to be slightly altered. I tried to do this in a way that still remained fair and balanced. View a couple of examples below.
                     </p>
 
                 </div>
@@ -328,6 +336,21 @@
                 lightboxOverlay.classList.remove('visible');
             });
 
+
+            // Blueprint Viewer Logic
+            const blueprintToggle = document.querySelector('.blueprint-toggle');
+            const blueprintViewer = document.querySelector('.blueprint-viewer');
+
+            if (blueprintToggle && blueprintViewer) {
+                blueprintToggle.addEventListener('click', () => {
+                    blueprintViewer.classList.toggle('visible');
+                    if (blueprintViewer.classList.contains('visible')) {
+                        blueprintToggle.textContent = 'Hide Blueprint';
+                    } else {
+                        blueprintToggle.textContent = 'View BP_Boss';
+                    }
+                });
+            }
 
             // Interactive Ability Showcase Logic
             const showcases = document.querySelectorAll('.ability-showcase-interactive');
