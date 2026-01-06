@@ -100,7 +100,46 @@
                         </p>
                     </div>
                     <div class="feature-visual">
-                        <img src="images/cosmosis/enemytiers.png" alt="A diagram showing the Green, Yellow, and Red enemy tiers.">
+                        <figure>
+                            <img src="images/cosmosis/enemytiers.png" alt="A diagram showing the Green, Yellow, and Red enemy tiers.">
+                            <figcaption>First draft for enemies</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- Enemy Showcase Gallery -->
+                <div class="enemy-showcase-gallery">
+                    <div class="gallery-layout-container">
+                        <div class="gallery-main-player">
+                            <video class="gallery-video active" autoplay loop muted playsinline>
+                                <source src="videos/cosmosis/summoner_footage.mp4" type="video/mp4">
+                            </video>
+                            <video class="gallery-video" loop muted playsinline></video>
+                        </div>
+                        <div class="gallery-description-panel">
+                            <h3 id="enemy-gallery-title">Summoner</h3>
+                            <p id="enemy-gallery-description">A powerful caster that summons lesser enemies. It is not designed to be too dangerous upfront, but can quickly overwhelm players if left unattended.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-previews-wrapper">
+                        <div class="gallery-previews">
+                            <div class="preview-item active" data-video-src="videos/cosmosis/summoner_footage.mp4" data-title="Summoner" data-description="A powerful caster that summons lesser enemies. It is not designed to be too dangerous upfront, but can quickly overwhelm players if left unattended.">
+                                <video muted playsinline><source src="videos/cosmosis/summoner_footage.mp4" type="video/mp4"></video>
+                                <span>Summoner</span>
+                            </div>
+                            <div class="preview-item" data-video-src="videos/cosmosis/simple_footage.mp4" data-title="Cultist" data-description="A standard melee enemy that has a simple swing attack.">
+                                <video muted playsinline><source src="videos/cosmosis/simple_footage.mp4" type="video/mp4"></video>
+                                <span>Cultist</span>
+                            </div>
+                            <div class="preview-item" data-video-src="videos/cosmosis/ranged_footage.mp4" data-title="Wraith" data-description="A ranged enemy with simple projectiles and a dangerous homing shadow orb.">
+                                <video muted playsinline><source src="videos/cosmosis/ranged_footage.mp4" type="video/mp4"></video>
+                                <span>Wraith</span>
+                            </div>
+                            <div class="preview-item" data-video-src="videos/cosmosis/brute_footage.mp4" data-title="Brute" data-description="A powerful juggernaut. Has a dangerous 3-swing melee attack along with a gap-closing leap ability.">
+                                <video muted playsinline><source src="videos/cosmosis/brute_footage.mp4" type="video/mp4"></video>
+                                <span>Brute</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -119,7 +158,10 @@
                         </p>
                     </div>
                     <div class="feature-visual">
-                        <img src="images/cosmosis/interrupt_example.png" alt="A diagram showing the elemental interrupt mechanic.">
+                        <figure>
+                            <img src="images/cosmosis/interrupt_example.png" alt="A diagram showing the elemental interrupt mechanic.">
+                            <figcaption>Concept Image: Enemy casting an ability, interruptable with fire damage</figcaption>
+                        </figure>
                     </div>
                 </div>
             </section>
@@ -352,6 +394,61 @@
                 });
             }
 
+            // Enemy Showcase Gallery Logic
+            const enemyGalleryContainer = document.querySelector('.enemy-showcase-gallery .gallery-main-player');
+            const enemyPreviews = document.querySelectorAll('.enemy-showcase-gallery .preview-item');
+            const enemyGalleryTitle = document.getElementById('enemy-gallery-title');
+            const enemyGalleryDescription = document.getElementById('enemy-gallery-description');
+
+            if (enemyGalleryContainer && enemyPreviews.length > 0) {
+                const enemyVideoPlayers = enemyGalleryContainer.querySelectorAll('.gallery-video');
+                let enemyActivePlayerIndex = 0;
+
+                enemyPreviews.forEach(preview => {
+                    preview.addEventListener('click', () => {
+                        if (preview.classList.contains('active')) return;
+
+                        const videoSrc = preview.dataset.videoSrc;
+                        const title = preview.dataset.title;
+                        const description = preview.dataset.description;
+
+                        // Update title and description
+                        if (enemyGalleryTitle) {
+                            enemyGalleryTitle.textContent = title;
+                        }
+                        if (enemyGalleryDescription) {
+                            enemyGalleryDescription.textContent = description;
+                        }
+
+                        const currentPlayer = enemyVideoPlayers[enemyActivePlayerIndex];
+                        const nextPlayerIndex = (enemyActivePlayerIndex + 1) % 2;
+                        const nextPlayer = enemyVideoPlayers[nextPlayerIndex];
+
+                        nextPlayer.src = videoSrc;
+                        nextPlayer.load();
+
+                        const playNextVideo = () => {
+                            nextPlayer.play();
+                            nextPlayer.classList.add('active');
+                            currentPlayer.classList.remove('active');
+                            enemyActivePlayerIndex = nextPlayerIndex;
+
+                            setTimeout(() => {
+                                currentPlayer.pause();
+                                currentPlayer.src = "";
+                            }, 500);
+
+                            nextPlayer.removeEventListener('canplay', playNextVideo);
+                        };
+
+                        nextPlayer.addEventListener('canplay', playNextVideo);
+
+                        enemyPreviews.forEach(p => p.classList.remove('active'));
+                        preview.classList.add('active');
+                    });
+                });
+            }
+
             // Interactive Ability Showcase Logic
             const showcases = document.querySelectorAll('.ability-showcase-interactive');
             showcases.forEach(showcase => {
@@ -389,14 +486,14 @@
             });
 
             // Scrapped Abilities Gallery Logic (Smooth Transition)
-            const galleryContainer = document.querySelector('.gallery-main-player');
-            const previews = document.querySelectorAll('.preview-item');
+            const scrappedGalleryContainer = document.querySelector('#scrapped-abilities .gallery-main-player');
+            const scrappedPreviews = document.querySelectorAll('#scrapped-abilities .preview-item');
 
-            if (galleryContainer && previews.length > 0) {
-                const videoPlayers = galleryContainer.querySelectorAll('.gallery-video');
+            if (scrappedGalleryContainer && scrappedPreviews.length > 0) {
+                const videoPlayers = scrappedGalleryContainer.querySelectorAll('.gallery-video');
                 let activePlayerIndex = 0;
 
-                previews.forEach(preview => {
+                scrappedPreviews.forEach(preview => {
                     preview.addEventListener('click', () => {
                         if (preview.classList.contains('active')) return;
 
@@ -427,7 +524,7 @@
 
                         nextPlayer.addEventListener('canplay', playNextVideo);
 
-                        previews.forEach(p => p.classList.remove('active'));
+                        scrappedPreviews.forEach(p => p.classList.remove('active'));
                         preview.classList.add('active');
                     });
                 });
