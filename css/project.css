@@ -122,6 +122,9 @@
 
 .feature-text-full {
     margin-bottom: 2rem;
+    max-width: 800px;
+    margin: 0 0 3rem 0; /* Changed from 'margin: 0 auto 3rem auto' */
+    text-align: left;
 }
 
 .feature-showcase.reverse {
@@ -570,7 +573,7 @@
 
 .feature-text-full {
     max-width: 800px;
-    margin: 0 auto 3rem auto;
+    margin: 0 0 3rem 0; /* Changed from 'margin: 0 auto 3rem auto' */
     text-align: left;
 }
 
@@ -579,4 +582,32 @@
     border-bottom: none;
     display: block;
     margin-top: 2rem;
+}
+
+.feature-text-full p {
+    text-align: left; /* Explicitly set text alignment */
+}
+
+.feature-text-full ul {
+    text-align: left; /* Ensure lists are also left-aligned */
+    list-style-position: outside;
+    margin-left: 1.5rem;
+}
+
+.feature-text-full ul li {
+    text-align: left;
+    color: var(--primary-text); /* Keep bullet point text white */
+}
+
+.feature-text-full ul li strong {
+    color: var(--primary-text); /* Keep the bold phase names white */
+}
+
+/* New rule to make the description text after <br> grey */
+.feature-text-full ul li {
+    color: var(--secondary-text); /* Make all li text grey by default */
+}
+
+.feature-text-full ul li strong {
+    color: var(--primary-text); /* Override to keep bold text white */
 }

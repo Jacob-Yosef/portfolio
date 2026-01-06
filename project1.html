@@ -80,16 +80,11 @@
             <!-- Enemies Section -->
             <section class="project-section" id="enemies-section">
                 <h2>Enemies</h2>
-                <div class="feature-showcase">
-                    <div class="feature-text">
-                        <h3>Design Philosophy</h3>
-                        <p>
-                            I began by researching successful top-down combat games like <em>Hades</em> and <em>V Rising</em>. My goal was to avoid a horde-based system and instead focus on fewer, more meaningful enemies. Each enemy was designed to have slightly unique patterns and abilities, requiring players to actually learn how some of them work.
-                        </p>
-                    </div>
-                    <div class="feature-visual">
-                        <img src="https://via.placeholder.com/400x300.gif/1f1f1f/ffffff?text=Enemy+Showcase" alt="GIF of enemy gameplay">
-                    </div>
+                <div class="feature-text-full">
+                    <h3>Design Philosophy</h3>
+                    <p>
+                        I began by researching successful top-down combat games like <em>Hades</em> and <em>V Rising</em>. My goal was to avoid a horde-based system and instead focus on fewer, more meaningful enemies. Each enemy was designed to have slightly unique patterns and abilities, requiring players to actually learn how some of them work.
+                    </p>
                 </div>
 
                 <div class="feature-showcase reverse">
@@ -146,10 +141,15 @@
                 <div class="feature-text-full">
                     <h3>Abilities</h3>
                     <p>
-                        My process involved creating each ability within a modular Actor Component Blueprint. A key technical challenge was clearly telegraphing attacks. To solve this efficiently, I developed a reusable telegraph system with an event dispatcher that would signal when the indicator's timer finished. This blueprint exposed variables for size and lifetime, allowing it to be adapted for numerous enemy and player abilities, which saved significant development time.
+                        I was responsible for implementing all enemy abilities.
+                        My process involved creating each ability within a modular Actor Component Blueprint. Something I realized quite early was that, given the nature of top down games,
+                        telegraphing certain abilities would be extremely important.
+                        To solve this efficiently, I developed a reusable telegraph indicator with an event dispatcher that would signal when the indicator's timer finished.
+                        Built with flexibility in mind, this indicator could easily be reused across both enemy and player abilities, which saved significant development time.
+
                     </p>
                     <div class="blueprint-container">
-                        <a class="blueprint-toggle" data-show-text="View Ability Blueprint" data-hide-text="Hide Blueprint">View Ability Blueprint</a>
+                        <a class="blueprint-toggle" data-show-text="View Example Ability Blueprint" data-hide-text="Hide Blueprint">View Example Ability Blueprint</a>
                         <div class="blueprint-viewer">
                             <iframe src="https://blueprintue.com/render/3-yxdwpn/" scrolling="no" allowfullscreen></iframe>
                         </div>
@@ -178,7 +178,7 @@
                 <div class="feature-text-full">
                     <h3>Prototyping & Scoping</h3>
                     <p>
-                        This boss was developed late in production with limited time, and our programmers were very busy at the time. I had already made the abilities but we decided that I would take responsibility for creating the AI behavior (e.g., choice of abilities, phase shifting) as well. The setup wasn’t perfectly structured but it got the job done.
+                        Due to a limited timeframe, the boss was developed late in production. I had already made the abilities but we decided that I would take responsibility for creating the AI behavior (e.g., choice of abilities, phase shifting) as well. The setup wasn’t perfectly structured but it got the job done.
                     </p>
                     <h3>Structure & Phasing</h3>
                     <p>
@@ -246,10 +246,10 @@
                         </div>
                         <div class="ability-details">
                             <div class="mode-selector">
-                                <button class="mode-btn active" data-mode="sp" data-description="As a solo player, the boss tethers itself to you, dealing damage over time if you move too far away.">
+                                <button class="mode-btn active" data-mode="sp" data-description="As a solo player, the boss tethers itself to you, dealing damage over time and slowing you until you break it by moving further away.">
                                     Single-Player
                                 </button>
-                                <button class="mode-btn" data-mode="coop" data-description="In co-op mode, you get tethered to your partner. If the tether is stretched too far, it breaks and damages both players.">
+                                <button class="mode-btn" data-mode="coop" data-description="In co-op mode, you get tethered to your partner. The players need to coordinate and create distance between each other to break the tether.">
                                     Co-op
                                 </button>
                             </div>
@@ -269,11 +269,16 @@
                     <div class="feature-text">
                         <h3>State Machines & Blendspaces</h3>
                         <p>
-                            My role extended to implementing animations for most characters and enemies. This involved setting up Animation Blueprints with state machines to handle transitions between idle, moving, attacking, and death states. I utilized blendspaces for the player character to ensure smooth 8-directional movement, and used montage notifies to trigger abilities and damage.
+                            My role extended to implementing animations for most characters and enemies.
+                            This involved setting up Animation Blueprints for all the enemies, setting up montages, and using notify events to trigger gameplay effects.
+                            For the player character, I utilized blendspaces to achieve smooth 8-directional movement based on mouse position and speed.
                         </p>
                     </div>
                     <div class="feature-visual">
-                        <img src="https://via.placeholder.com/400x300.gif/1f1f1f/ffffff?text=Animation+System" alt="GIF of animation system">
+                        <video autoplay loop muted playsinline>
+                            <source src="videos/cosmosis/movement.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </section>
