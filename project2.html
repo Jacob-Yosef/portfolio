@@ -146,15 +146,63 @@
                 <div class="feature-showcase">
                     <div class="feature-text">
                         <p>
-                            The main system and the heart of the prototype is the Hoverboard Movement. The hoverboard uses multiple line traces to detect distance from the ground.
-                            Each trace calculates a push force based on that distance, allowing the board to dynamically adjust to the terrain.
+                            The main system and the heart of the prototype is the Hoverboard Movement. With a big open world with high mountains and deep valleys, it was very important to achieve smooth and satisfying movement.
                         </p>
-
                     </div>
                     <div class="feature-visual">
-                        <video autoplay loop muted playsinline>
-                            <source src="videos/Hoverboarder/hoverboard_movement.mp4" type="video/mp4">
-                        </video>
+                        <div class="enemy-showcase-gallery">
+                            <div class="gallery-layout-container">
+                                <div class="gallery-main-player">
+                                    <video class="gallery-video active" loop muted playsinline data-physics="physics1">
+                                        <source src="videos/Hoverboarder/Physics1.mp4" type="video/mp4">
+                                    </video>
+                                    <video class="gallery-video" loop muted playsinline data-physics="physics2">
+                                        <source src="videos/Hoverboarder/Physics2.mp4" type="video/mp4">
+                                    </video>
+                                    <video class="gallery-video" loop muted playsinline data-physics="forward-trace">
+                                        <source src="videos/Hoverboarder/ForwardLineTrace.mp4" type="video/mp4">
+                                    </video>
+                                    <video class="gallery-video" loop muted playsinline data-physics="current-physics">
+                                        <source src="videos/Hoverboarder/Linetraces.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="gallery-description-panel">
+                                    <h3 class="physics-title">First Iteration</h3>
+                                    <p class="physics-description">
+                                        Line traces in each corner detect ground distance and apply push forces based on that distance, allowing the board to dynamically adjust to the terrain.<br>
+                                        <br>This first iteration was far from what I wanted physics-wise, but it was a good starting point.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="gallery-previews-wrapper">
+                                <div class="gallery-previews">
+                                    <div class="preview-item active" data-physics="physics1">
+                                        <video loop muted playsinline>
+                                            <source src="videos/Hoverboarder/Physics1.mp4" type="video/mp4">
+                                        </video>
+                                        <span>First Iteration</span>
+                                    </div>
+                                    <div class="preview-item" data-physics="physics2">
+                                        <video loop muted playsinline>
+                                            <source src="videos/Hoverboarder/Physics2.mp4" type="video/mp4">
+                                        </video>
+                                        <span>Animations</span>
+                                    </div>
+                                    <div class="preview-item" data-physics="forward-trace">
+                                        <video loop muted playsinline>
+                                            <source src="videos/Hoverboarder/ForwardLineTrace.mp4" type="video/mp4">
+                                        </video>
+                                        <span>Forward Trace</span>
+                                    </div>
+                                    <div class="preview-item" data-physics="current-physics">
+                                        <video loop muted playsinline>
+                                            <source src="videos/Hoverboarder/Linetraces.mp4" type="video/mp4">
+                                        </video>
+                                        <span>Current Physics</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -178,13 +226,13 @@
                     <div class="gallery-layout-container">
                         <div class="gallery-main-player">
                             <video class="gallery-video active" loop muted playsinline data-ability="nitro">
-                                <source src="videos/Hoverboarder/nitro_ability.mp4" type="video/mp4">
+                                <source src="videos/Hoverboarder/Nitro.mp4" type="video/mp4">
                             </video>
                             <video class="gallery-video" loop muted playsinline data-ability="thruster">
-                                <source src="videos/Hoverboarder/thruster_ability.mp4" type="video/mp4">
+                                <source src="videos/Hoverboarder/Thruster.mp4" type="video/mp4">
                             </video>
-                            <video class="gallery-video" loop muted playsinline data-ability="magnet">
-                                <source src="videos/Hoverboarder/magnet_ability.mp4" type="video/mp4">
+                            <video class="gallery-video" loop muted playsinline data-ability="magnesis">
+                                <source src="videos/Hoverboarder/Magnesis.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="gallery-description-panel">
@@ -198,19 +246,19 @@
                         <div class="gallery-previews">
                             <div class="preview-item active" data-ability="nitro">
                                 <video loop muted playsinline>
-                                    <source src="videos/Hoverboarder/nitro_ability.mp4" type="video/mp4">
+                                    <source src="videos/Hoverboarder/Nitro.mp4" type="video/mp4">
                                 </video>
                                 <span>Nitro Boost</span>
                             </div>
                             <div class="preview-item" data-ability="thruster">
                                 <video loop muted playsinline>
-                                    <source src="videos/Hoverboarder/thruster_ability.mp4" type="video/mp4">
+                                    <source src="videos/Hoverboarder/Thruster.mp4" type="video/mp4">
                                 </video>
                                 <span>Thruster</span>
                             </div>
-                            <div class="preview-item" data-ability="magnet">
+                            <div class="preview-item" data-ability="magnesis">
                                 <video loop muted playsinline>
-                                    <source src="videos/Hoverboarder/magnet_ability.mp4" type="video/mp4">
+                                    <source src="videos/Hoverboarder/Magnesis.mp4" type="video/mp4">
                                 </video>
                                 <span>Magnesis</span>
                             </div>
@@ -235,7 +283,7 @@
                     </div>
                     <div class="feature-visual">
                         <video autoplay loop muted playsinline>
-                            <source src="videos/Hoverboarder/exploration.mp4" type="video/mp4">
+                            <source src="videos/Hoverboarder/Scrap.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -260,7 +308,7 @@
                     </div>
                     <div class="feature-visual">
                         <video autoplay loop muted playsinline>
-                            <source src="videos/Hoverboarder/dialogue.mp4" type="video/mp4">
+                            <source src="videos/Hoverboarder/NPC_Events.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -286,22 +334,22 @@
                                 <source src="videos/Hoverboarder/race_speed.mp4" type="video/mp4">
                             </video>
                             <video class="gallery-video" loop muted playsinline data-race="precision">
-                                <source src="videos/Hoverboarder/race_precision.mp4" type="video/mp4">
-                            </video>
-                            <video class="gallery-video" loop muted playsinline data-race="terrain">
-                                <source src="videos/Hoverboarder/race_terrain.mp4" type="video/mp4">
-                            </video>
-                            <video class="gallery-video" loop muted playsinline data-race="thruster">
-                                <source src="videos/Hoverboarder/race_thruster.mp4" type="video/mp4">
+                                <source src="videos/Hoverboarder/Race_PrecisionControl.mp4" type="video/mp4">
                             </video>
                             <video class="gallery-video" loop muted playsinline data-race="turtle">
-                                <source src="videos/Hoverboarder/race_turtle.mp4" type="video/mp4">
+                                <source src="videos/Hoverboarder/Race_Turtles.mp4" type="video/mp4">
+                            </video>
+                            <video class="gallery-video" loop muted playsinline data-race="thruster">
+                                <source src="videos/Hoverboarder/Race_Thruster.mp4" type="video/mp4">
+                            </video>
+                            <video class="gallery-video" loop muted playsinline data-race="magnesis">
+                                <source src="videos/Hoverboarder/Race_Magnesis.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="gallery-description-panel">
                             <h3 class="race-title">Speed-Focused Race</h3>
                             <p class="race-description">
-                                .
+                                A straightforward race that tests the player's ability to maintain momentum with several speed boosts along the path.
                             </p>
                         </div>
                     </div>
@@ -311,31 +359,31 @@
                                 <video loop muted playsinline>
                                     <source src="videos/Hoverboarder/race_speed.mp4" type="video/mp4">
                                 </video>
-                                <span>Speed Race</span>
+                                <span>Speed</span>
                             </div>
                             <div class="preview-item" data-race="precision">
                                 <video loop muted playsinline>
-                                    <source src="videos/Hoverboarder/race_precision.mp4" type="video/mp4">
+                                    <source src="videos/Hoverboarder/Race_PrecisionControl.mp4" type="video/mp4">
                                 </video>
-                                <span>Precision Race</span>
-                            </div>
-                            <div class="preview-item" data-race="terrain">
-                                <video loop muted playsinline>
-                                    <source src="videos/Hoverboarder/race_terrain.mp4" type="video/mp4">
-                                </video>
-                                <span>Terrain Race</span>
-                            </div>
-                            <div class="preview-item" data-race="thruster">
-                                <video loop muted playsinline>
-                                    <source src="videos/Hoverboarder/race_thruster.mp4" type="video/mp4">
-                                </video>
-                                <span>Thruster Race</span>
+                                <span>Precision & Control</span>
                             </div>
                             <div class="preview-item" data-race="turtle">
                                 <video loop muted playsinline>
-                                    <source src="videos/Hoverboarder/race_turtle.mp4" type="video/mp4">
+                                    <source src="videos/Hoverboarder/Race_Turtles.mp4" type="video/mp4">
                                 </video>
-                                <span>Turtle Race</span>
+                                <span>Turtle</span>
+                            </div>
+                            <div class="preview-item" data-race="thruster">
+                                <video loop muted playsinline>
+                                    <source src="videos/Hoverboarder/Race_Thruster.mp4" type="video/mp4">
+                                </video>
+                                <span>Thruster</span>
+                            </div>
+                            <div class="preview-item" data-race="magnesis">
+                                <video loop muted playsinline>
+                                    <source src="videos/Hoverboarder/Race_Magnesis.mp4" type="video/mp4">
+                                </video>
+                                <span>Magnesis</span>
                             </div>
                         </div>
                     </div>
@@ -344,7 +392,7 @@
 
             <!-- Customization -->
             <section id="customization" class="project-section">
-                <h2>Player Expression: Hoverboard Customization</h2>
+                <h2>Hoverboard Customization</h2>
                 <div class="feature-showcase reverse">
                     <div class="feature-text">
                         <p>
@@ -356,7 +404,7 @@
                     </div>
                     <div class="feature-visual">
                         <video autoplay loop muted playsinline>
-                            <source src="videos/Hoverboarder/customization.mp4" type="video/mp4">
+                            <source src="videos/Hoverboarder/Customization.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -384,7 +432,7 @@
                     </div>
                     <div class="feature-visual">
                         <video autoplay loop muted playsinline>
-                            <source src="videos/Hoverboarder/map.mp4" type="video/mp4">
+                            <source src="videos/Hoverboarder/Map.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -394,16 +442,13 @@
             <section id="key-takeaways" class="project-section">
                 <h2>Reflection</h2>
                 <div class="feature-text-full">
-                    <!--<ul>
-                        <li><strong>System interdependence creates depth:</strong> Rather than isolated features, interconnected systems create emergent gameplay and natural progression</li>
-                        <li><strong>Data-driven architecture enables rapid iteration:</strong> Using data tables and components allowed me to quickly add content and test different configurations</li>
-                        <li><strong>Physics-based movement requires careful tuning:</strong> Small adjustments to hover forces and acceleration dramatically impact player feel�iteration is essential</li>
-                        <li><strong>Player guidance without hand-holding:</strong> The map and upgrade requirements provide direction while preserving player agency</li>
-                        <li><strong>Scope management is crucial:</strong> Focusing on breadth and systemic interaction over individual polish allowed me to create a more complete experience that demonstrates systems thinking</li>
-                    </ul>
                     <p>
-                        Hoverboarder taught me valuable lessons about designing interconnected systems and creating cohesive gameplay loops. The project demonstrated that with smart architecture and clear design goals, it's possible to create an engaging open-world experience even within tight time constraints.
-                    </p>-->
+                        This project made me realize how much faster and more enjoyable prototyping and designing becomes when systems are built the right way from the start.
+                        By focusing on modular building blocks and data-driven systems, I was able to test and iterate quickly
+                        and even expand the initial scope, instead of having to spend time refactoring and remaking whole systems.
+                        <br><br>
+                        I hope to come back to this project at some point and maybe create a character blend space so I never have to look at that static surf pose again!
+                    </p>
                 </div>
             </section>
 
@@ -439,6 +484,27 @@
             });
         });
 
+        // Physics Gallery functionality
+        const physicsDescriptions = {
+            physics1: {
+                title: 'First Iteration',
+                description: 'Line traces in each corner detect ground distance and apply push forces based on that distance, allowing the board to dynamically adjust to the terrain. This first iteration was far from what I wanted physics-wise, but it was a good starting point.'
+                    
+            },
+            physics2: {
+                title: 'Animations',
+                description: 'Added an equip animation and momentum-maintaining logic to preserve speed between equips and unequips.'
+            },
+            'forward-trace': {
+                title: 'Forward Trace',
+                description: 'The forward trace was added to detect upcoming obstacles and applies a slight upwards force, allowing the hoverboard to rotate vertically smoothly.'
+            },
+            'current-physics': {
+                title: 'Current Physics',
+                description: 'Much better tuned values and visual effects for a more satisfying feel.'
+            }
+        };
+
         // Active Abilities Gallery functionality
         const abilityDescriptions = {
             nitro: {
@@ -449,7 +515,7 @@
                 title: 'Thruster',
                 description: 'Launches the hoverboard vertically when close to the ground, like a jump. Enables vertical exploration and climb-based challenges.'
             },
-            magnet: {
+            magnesis: {
                 title: 'Magnesis',
                 description: 'Toggles the hoverboard forces from push to pull. This allows players to stick to the ground, ride steep terrain, and re-stabilize the board.'
             }
@@ -459,25 +525,54 @@
         const raceDescriptions = {
             speed: {
                 title: 'Speed-Focused Race',
-                description: '.'
+                description: 'A straightforward race that tests the players ability to maintain momentum with several speed boosts along the path.'
             },
             precision: {
-                title: 'Precision & Control Race',
-                description: '.'
-            },
-            terrain: {
-                title: 'Terrain-Based Challenge',
-                description: '.'
-            },
-            thruster: {
-                title: 'Thruster-Specific Race',
-                description: '.'
+                title: 'Precision & Control Races',
+                description: 'These races challenge you with tight turns and narrow cliffs'
             },
             turtle: {
-                title: 'Turtle Interaction Race',
-                description: '.'
+                title: 'Turtle Races',
+                description: 'Depending on the race, the player might utilize the turtles to launch themselves, or avoid them to maintain control.'
+            },
+
+            thruster: {
+                title: 'Thruster-Specific Race',
+                description: 'Designed around the Thruster ability, this race challenges players to jump between platforms and reach new heights'
+            },
+            magnesis: {
+                title: 'Magnesis Challenge',
+                description: 'This race requires the use of the Magnesis ability to traverse steep inclines, and also practices quick toggling to avoid obstacles.'
             }
         };
+
+        // Setup physics gallery
+        const physicsPreviews = document.querySelectorAll('#hoverboard-movement .preview-item');
+        const physicsVideos = document.querySelectorAll('#hoverboard-movement .gallery-video');
+        const physicsTitle = document.querySelector('#hoverboard-movement .physics-title');
+        const physicsDescription = document.querySelector('#hoverboard-movement .physics-description');
+
+        physicsPreviews.forEach(preview => {
+            preview.addEventListener('click', () => {
+                const physicsType = preview.getAttribute('data-physics');
+
+                physicsPreviews.forEach(p => p.classList.remove('active'));
+                preview.classList.add('active');
+
+                physicsVideos.forEach(video => {
+                    video.classList.remove('active');
+                    video.pause();
+                    if (video.getAttribute('data-physics') === physicsType) {
+                        video.classList.add('active');
+                        video.play();
+                    }
+                });
+
+                const info = physicsDescriptions[physicsType];
+                physicsTitle.textContent = info.title;
+                physicsDescription.textContent = info.description;
+            });
+        });
 
         // Setup ability gallery
         const abilityPreviews = document.querySelectorAll('#progression-upgrades .preview-item');
@@ -489,11 +584,9 @@
             preview.addEventListener('click', () => {
                 const abilityType = preview.getAttribute('data-ability');
 
-                // Update active states
                 abilityPreviews.forEach(p => p.classList.remove('active'));
                 preview.classList.add('active');
 
-                // Update videos
                 abilityVideos.forEach(video => {
                     video.classList.remove('active');
                     video.pause();
@@ -503,7 +596,6 @@
                     }
                 });
 
-                // Update description
                 const info = abilityDescriptions[abilityType];
                 abilityTitle.textContent = info.title;
                 abilityDescription.textContent = info.description;
@@ -524,11 +616,9 @@
             preview.addEventListener('click', () => {
                 const raceType = preview.getAttribute('data-race');
 
-                // Update active states
                 racePreviews.forEach(p => p.classList.remove('active'));
                 preview.classList.add('active');
 
-                // Update videos
                 raceVideos.forEach(video => {
                     video.classList.remove('active');
                     video.pause();
@@ -538,7 +628,6 @@
                     }
                 });
 
-                // Update description
                 const info = raceDescriptions[raceType];
                 raceTitle.textContent = info.title;
                 raceDescription.textContent = info.description;
