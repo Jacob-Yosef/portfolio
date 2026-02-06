@@ -326,12 +326,19 @@
                     </p>
                 </div>
 
+                <div class="blueprint-container">
+                    <a class="blueprint-toggle" data-show-text="View Race Component Blueprint" data-hide-text="Hide Blueprint">View Race Component Blueprint</a>
+                    <div class="blueprint-viewer">
+                        <iframe src="https://blueprintue.com/render/3aykqsgr/" scrolling="no" allowfullscreen></iframe>
+                    </div>
+                </div>
+
                 <!-- Race Variety Gallery -->
                 <div class="enemy-showcase-gallery">
                     <div class="gallery-layout-container">
                         <div class="gallery-main-player">
                             <video class="gallery-video active" loop muted playsinline data-race="speed">
-                                <source src="videos/Hoverboarder/race_speed.mp4" type="video/mp4">
+                                <source src="videos/Hoverboarder/Race_Speed.mp4" type="video/mp4">
                             </video>
                             <video class="gallery-video" loop muted playsinline data-race="precision">
                                 <source src="videos/Hoverboarder/Race_PrecisionControl.mp4" type="video/mp4">
@@ -484,12 +491,25 @@
             });
         });
 
+        // Blueprint Viewer Logic
+        document.querySelectorAll('.blueprint-toggle').forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                const viewer = toggle.closest('.blueprint-container').querySelector('.blueprint-viewer');
+
+                if (viewer) {
+                    const isVisible = viewer.classList.toggle('visible');
+                    toggle.textContent = isVisible ? toggle.dataset.hideText : toggle.dataset.showText;
+                }
+            });
+        });
+
         // Physics Gallery functionality
         const physicsDescriptions = {
             physics1: {
                 title: 'First Iteration',
                 description: 'Line traces in each corner detect ground distance and apply push forces based on that distance, allowing the board to dynamically adjust to the terrain. This first iteration was far from what I wanted physics-wise, but it was a good starting point.'
-                    
+
             },
             physics2: {
                 title: 'Animations',
