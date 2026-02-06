@@ -42,6 +42,7 @@
         background: var(--blue);
         opacity: 0.6;
         transition: opacity 0.3s ease;
+        z-index: 1;
     }
 
     .project-card:hover::before {
@@ -59,7 +60,12 @@
     height: 280px;
     overflow: hidden;
     position: relative;
+    transition: height 0.4s ease;
 }
+
+    .project-card:hover .project-media {
+        height: 600px;
+    }
 
     .project-media video,
     .project-media img {
@@ -90,8 +96,17 @@
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     color: var(--primary-text);
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.4rem;
     font-weight: 600;
+}
+
+.project-details > p {
+    font-size: 0.95rem;
+    color: #A3AABE;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
 }
 
 .project-tags {

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boss Prototype | Jacob Yosef</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/prototype-detail.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <a href="index.html" class="sidebar-top-link">
+            <div class="sidebar-top">
+                <img src="images/linkedinprof.jpg" alt="Jacob's Profile" class="profile-image">
+                <h1>Jacob Yosef</h1>
+                <h2>Technical & Systems Designer</h2>
+            </div>
+        </a>
+        <nav>
+            <a href="index.html#projects">Projects</a>
+            <a href="prototypes.html">Prototypes</a>
+            <a href="resume.html">Resume</a>
+            <a href="index.html#about-contact">Contact</a>
+        </nav>
+        <div class="sidebar-bottom">
+            <a href="mailto:jacobyosef98@gmail.com">jacobyosef98@gmail.com</a>
+        </div>
+    </aside>
+    <header class="project-header">
+        <h1>Viscerate</h1>
+        <div class="project-meta-tags">
+            <span class="meta-tag">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                17 People
+            </span>
+            <span class="meta-tag">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                7 Weeks
+            </span>
+            <span class="meta-tag">
+                <img src="images/unreal_icon.png" alt="Unreal Icon">
+                Unreal Engine
+            </span>
+            <span class="meta-tag">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                2025
+            </span>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="prototype-container">
+            <header class="prototype-header">
+                <button class="back-btn" onclick="location.href='prototypes.html'">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                    Back to Prototypes
+                </button>
+                <h1>Boss Fight Prototype</h1>
+                <p class="prototype-subtitle">A technical showcase of boss encounters with varied combat mechanics</p>
+                <div class="prototype-meta-tags">
+                    <span class="meta-tag">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Solo
+                    </span>
+                    <span class="meta-tag">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        3 Weeks
+                    </span>
+                    <span class="meta-tag">
+                        <img src="images/unity_icon.png" alt="Unity Icon">
+                        Unity
+                    </span>
+                    <span class="meta-tag">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        2024
+                    </span>
+                </div>
+            </header>
+
+            <!-- Overview Section -->
+            <section class="overview-section">
+                <div class="overview-content">
+                    <div class="overview-text">
+                        <h2>Overview</h2>
+                        <p>
+                            This prototype explores boss encounters with distinct themes and abilities. The goal was to design and implement different boss fights,
+                            each featuring unique mechanics and playstyles, while incorporating status effects, stacking mechanics, and debuffs.
+                        </p>
+                    </div>
+                    <div class="overview-video">
+                        <video controls autoplay loop muted playsinline>
+                            <source src="videos/Other/BossPrototype/BossPrototype_Trailer.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tab-section">
+                <div class="tab-navigation">
+                    <button class="tab-btn active" data-tab="player-abilities">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Player Abilities
+                    </button>
+                    <button class="tab-btn" data-tab="shadow-striker">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                        </svg>
+                        Shadow Striker
+                    </button>
+                    <button class="tab-btn" data-tab="electro-boss">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                        Electro Boss
+                    </button>
+                </div>
+
+                <div class="tab-content-wrapper">
+                    <!-- Player Abilities Tab -->
+                    <div class="tab-content active" id="player-abilities">
+                        <div class="content-layout">
+                            <div class="media-section">
+                                <video class="main-demo-video" controls loop muted playsinline>
+                                    <source src="videos/Other/BossPrototype/Melee.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="ability-video-description">
+                                    <h3>Melee Attack</h3>
+                                    <p>Slashes the sword and deals damage to hit enemies. Charging the melee attacks will swing the sword and deal an increased amount of AoE damage.</p>
+                                </div>
+                            </div>
+                            <div class="description-section">
+                                <h2>Player Abilities</h2>
+                                <p>
+                                    Players can customize their hotbar with a set of available skills, via a spellbook. The player has melee attacks, projectiles attacks and a dash.
+                                </p>
+                                <div class="ability-list">
+                                    <div class="ability-item clickable selected"
+                                         data-video="videos/Other/BossPrototype/Melee.mp4"
+                                         data-title="Melee Attack"
+                                         data-description="Slashes the sword and deals damage to hit enemies. Charging the melee attacks will swing the sword and deal an increased amount of AoE damage.">
+                                        <h4>Melee Attack</h4>
+                                    </div>
+                                    <div class="ability-item clickable"
+                                         data-video="videos/Other/BossPrototype/Fireball.mp4"
+                                         data-title="Fireball"
+                                         data-description="Fires a fire projectile that deals damage on impact and gives the enemy 1 stack of Burn. Burned targets take damage every second scaling with amounts of stacks. At 5 stacks the burn explodes, dealing massive damage in the area.">
+                                        <h4>Fireball</h4>
+                                    </div>
+                                    <div class="ability-item clickable"
+                                         data-video="videos/Other/BossPrototype/IceShards.mp4"
+                                         data-title="Ice Shards"
+                                         data-description="Release 4 ice projectiles in rapid succession. Each applying a stack of Freeze. Freeze slows the enemy, with the slow percentage scaling with stacks.">
+                                        <h4>Ice Shards</h4>
+                                    </div>
+                                    <div class="ability-item clickable"
+                                         data-video="videos/Other/BossPrototype/Dash.mp4"
+                                         data-title="Dash"
+                                         data-description="The player dashes in their movement direction.">
+                                        <h4>Dash</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shadow Striker Boss Tab -->
+                    <div class="tab-content" id="shadow-striker">
+                        <div class="content-layout">
+                            <div class="media-section">
+                                <video class="main-demo-video" controls loop muted playsinline>
+                                    <source src="videos/Other/BossPrototype/PhantomDash.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="ability-video-description">
+                                    <h3>Phantom Dash</h3>
+                                    <p>Vanishes into shadow and unleashes 5 quick dashes through the target, dealing damage on hit.</p>
+                                </div>
+                            </div>
+                            <div class="description-section">
+                                <h2>Shadow Striker Boss</h2>
+                                <p>
+                                    An intense movement based boss with quick attacks that leave very brief windows for the player to strike back. It is designed to reward careful timing and positioning.
+                                </p>
+                                <div class="ability-list">
+                                    <div class="ability-item clickable selected"
+                                         data-video="videos/Other/BossPrototype/PhantomDash.mp4"
+                                         data-title="Phantom Dash"
+                                         data-description="Vanishes into shadow and unleashes 5 quick dashes through the target, dealing damage on hit.">
+                                        <h4>Phantom Dash</h4>
+                                    </div>
+                                    <div class="ability-item clickable"
+                                         data-video="videos/Other/BossPrototype/SkySlam.mp4"
+                                         data-title="Sky Slam"
+                                         data-description="Leaps high into the air and crashes down 5 times at the target's location, dealing damage in a wide radius with each impact.">
+                                        <h4>Sky Slam</h4>
+                                    </div>
+                                    <div class="ability-item clickable"
+                                         data-video="videos/Other/BossPrototype/Spikes.mp4"
+                                         data-title="Shadow Spike Juggle"
+                                         data-description="Spikes erupt beneath the target, lanching them into the air. Dashes through the airborne target 3 times, dealing dealing massive damage.">
+                                        <h4>Shadow Spike Juggle</h4>
+                                    </div>
+                                    <div class="ability-item clickable"
+                                         data-video="videos/Other/BossPrototype/MoS.mp4"
+                                         data-title="Mark of Shadows (Core Mechanic)"
+                                         data-description="Curses the player with a devestating debuff, represented by a shadow orb. At the end of its duration, 2 things can happen. <li>If the target takes damage, the orb explodes, dealing amplified burst damage and creating a permanent damaging shadow zone.</li> <li>If the target avoids all damage, the orb transforms into a temporary healing zone instead.</li>" <p></p>
+                                        <h4>Mark of Shadows (Core Mechanic)</h4>
+                                    </div>
+                                    <div class="ability-item clickable"
+                                         data-video="videos/Other/BossPrototype/Darkness.mp4"
+                                         data-title="Shadow Vision"
+                                         data-description="Shrouds the target's for 5 seconds, limiting the target's sight and awareness.">
+                                        <h4>Shadow Vision</h4>
+                                    </div>
+                                    <div class="ability-item clickable"
+                                         data-video="videos/Other/BossPrototype/Clones.mp4"
+                                         data-title="Shadow Images (Phase Ability)"
+                                         data-description="At 66% and 33% health, the boss splits into 3. Two are shadow clones with limited health. Until defeated, they mimin certain boss abilities, and must therefore be killed off quickly.">
+                                        <h4>Shadow Images (Phase Ability)</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Electro Boss Tab -->
+                    <div class="tab-content" id="electro-boss">
+                        <div class="content-layout">
+                            <div class="media-section">
+                                <video class="main-demo-video" controls loop muted playsinline>
+                                    <source src="videos/Other/BossPrototype/HomingProjectile.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="ability-video-description">
+                                    <h3>Homing Missile</h3>
+                                    <p>Fires a tracking projectile that pursues the target. Can be redirected to break the boss's own shield.</p>
+                                </div>
+                            </div>
+                            <div class="description-section">
+                                <h2>Electro Boss</h2>
+                                <p>
+                                    A simpler ranged boss that focuses on projectile attacks and area control, with the main focus being its shield ability and the strategy around breaking it.
+                                </p>
+                                <div class="ability-list">
+                                    <div class="ability-item clickable selected"
+                                         data-video="videos/Other/BossPrototype/HomingProjectile.mp4"
+                                         data-title="Homing Missile"
+                                         data-description="Fires a tracking projectile that pursues the target.">
+                                        <h4>Homing Missile</h4>
+                                    </div>
+                                    <div class="ability-item clickable"
+                                         data-video="videos/Other/BossPrototype/Volley.mp4"
+                                         data-title="Electric Barrage"
+                                         data-description="Unleashes 11 projectiles in a wide spread pattern, dealing damage and stunning caught targets.">
+                                        <h4>Electric Barrage</h4>
+                                    </div>
+                                    <div class="ability-item clickable"
+                                         data-video="videos/Other/BossPrototype/Shield.mp4"
+                                         data-title="Energy Shield"
+                                         data-description="Activates a protective barrier that reflects incoming projectiles back at the attacker. Breaking the shield stuns the boss and increases damage taken for a short duration.">
+                                        <h4>Energy Shield</h4>
+                                    </div>
+                                    <div class="ability-item clickable"
+                                         data-video="videos/Other/BossPrototype/ElectroliteSpawn.mp4"
+                                         data-title="Electrolite Adds"
+                                         data-description="Spawns Electrolites around the target, dealing damage in a small radius on spawn. Electrolites move toward the target and explode on proximity or death.">
+                                        <h4>Electrolite Adds</h4>
+                                    </div>
+                                    <div class="ability-item clickable"
+                                         data-video="videos/Other/BossPrototype/ElectroStorm.mp4"
+                                         data-title="Overcharge"
+                                         data-description="Moves to the center and becomes invulnerable, flooding the arena with charge projectiles for 12 seconds.">
+                                        <h4>Overcharge</h4>
+                                    </div>
+                                </div>
+
+                                <!-- Strategies Section -->
+                                <h3 class="strategies-header">Strategies</h3>
+                                <div class="ability-list">
+                                    <div class="ability-item clickable strategy-item"
+                                         data-video="videos/Other/BossPrototype/ShieldStrat.mp4"
+                                         data-title="Shield Breaking Strategy"
+                                         data-description="The key to defeating the Electro Boss is breaking its otherwise impenetrable Energy Shield.<br><br> The player can either:<ul><li>Lure the homing projectile back into the boss.</li><li>Detonate an Electrolite add near the boss.</li></ul><br> <p>Destroying the shield stuns the boss and increases damage taken for the duration."<p>
+                                        <h4>Shield Breaking Strategy</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // Tab Navigation Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            // Auto-select first ability on page load
+            const initialTab = document.querySelector('.tab-content.active');
+            const initialVideo = initialTab.querySelector('.main-demo-video');
+            if (initialVideo) {
+                initialVideo.play();
+            }
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetTab = btn.dataset.tab;
+
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Add active class to clicked button and corresponding content
+                    btn.classList.add('active');
+                    const activeTabContent = document.getElementById(targetTab);
+                    activeTabContent.classList.add('active');
+
+                    // Pause all videos
+                    document.querySelectorAll('.tab-content video').forEach(video => {
+                        video.pause();
+                    });
+
+                    // Get the first ability in the new tab and auto-select it
+                    const firstAbility = activeTabContent.querySelector('.ability-item.clickable');
+                    if (firstAbility) {
+                        const videoSrc = firstAbility.dataset.video;
+                        const title = firstAbility.dataset.title;
+                        const description = firstAbility.dataset.description;
+
+                        const mainVideo = activeTabContent.querySelector('.main-demo-video');
+                        const descriptionDiv = activeTabContent.querySelector('.ability-video-description');
+
+                        // Remove selected class from all abilities
+                        activeTabContent.querySelectorAll('.ability-item').forEach(item => {
+                            item.classList.remove('selected');
+                        });
+
+                        // Select the first ability
+                        firstAbility.classList.add('selected');
+
+                        // Update video source
+                        if (mainVideo) {
+                            mainVideo.src = videoSrc;
+                            mainVideo.load();
+                            mainVideo.play();
+                        }
+
+                        // Update description
+                        if (descriptionDiv) {
+                            descriptionDiv.innerHTML = `
+                                            <h3>${title}</h3>
+                                            <p>${description}</p>
+                                        `;
+                        }
+                    }
+                });
+            });
+
+            // Ability Click Logic
+            document.querySelectorAll('.ability-item.clickable').forEach(abilityItem => {
+                abilityItem.addEventListener('click', () => {
+                    const videoSrc = abilityItem.dataset.video;
+                    const title = abilityItem.dataset.title;
+                    const description = abilityItem.dataset.description;
+
+                    // Find the parent tab content
+                    const tabContent = abilityItem.closest('.tab-content');
+                    const mainVideo = tabContent.querySelector('.main-demo-video');
+                    const descriptionDiv = tabContent.querySelector('.ability-video-description');
+
+                    // Update description first (before video)
+                    if (descriptionDiv) {
+                        descriptionDiv.innerHTML = `
+                                        <h3>${title}</h3>
+                                        <p>${description}</p>
+                                    `;
+                    }
+
+                    // Update video with smooth transition
+                    if (mainVideo && mainVideo.src !== new URL(videoSrc, window.location.href).href) {
+                        // Fade out slightly
+                        mainVideo.style.opacity = '0.7';
+
+                        mainVideo.src = videoSrc;
+                        mainVideo.load();
+
+                        // Play and fade back in when ready
+                        mainVideo.addEventListener('loadeddata', function onLoad() {
+                            mainVideo.play();
+                            mainVideo.style.opacity = '1';
+                            mainVideo.removeEventListener('loadeddata', onLoad);
+                        });
+                    }
+
+                    // Remove selected class from all abilities in this tab
+                    tabContent.querySelectorAll('.ability-item').forEach(item => {
+                        item.classList.remove('selected');
+                    });
+
+                    // Add selected class to clicked item
+                    abilityItem.classList.add('selected');
+                });
+            });
+
+            // Smooth scrolling for navigation
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

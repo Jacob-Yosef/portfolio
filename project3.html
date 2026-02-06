@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viscerate | Jacob Yosef</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/project.css">
+    <style>
+        /* Styles for the new design process block */
+        .design-process-block {
+            background-color: #2a2d34; /* Dark blue-grey background */
+            border-left: 3px solid #6a8aaa; /* Muted blue accent */
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 20px;
+        }
+
+            .design-process-block h4 {
+                font-family: 'Inter', sans-serif;
+                font-size: 1.1rem;
+                font-weight: 700;
+                color: #6a8aaa; /* Muted blue for titles */
+                margin-bottom: 8px;
+            }
+
+            .design-process-block p {
+                margin-bottom: 16px;
+                font-size: 0.95rem;
+                color: #cccccc; /* Light grey for readability */
+                line-height: 1.6;
+            }
+
+                .design-process-block p:last-child {
+                    margin-bottom: 0;
+                }
+    </style>
+</head>
+<body class="project-page-body">
+
+    <a href="#" id="back-to-top-btn" class="back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7" /></svg>
+        <span>Back to Top</span>
+    </a>
+
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <a href="index.html" class="sidebar-top-link">
+                <img src="images/linkedinprof.jpg" alt="Jacob's Profile" class="profile-image">
+                <h1>Jacob Yosef</h1>
+            </a>
+            <h2>Technical & Systems Designer</h2>
+        </div>
+        <nav>
+            <a href="index.html#projects">Projects</a>
+            <a href="prototypes.html">Prototypes</a>
+            <a href="resume.html">Resume</a>
+            <a href="index.html#about-contact">Contact</a>
+        </nav>
+        <div class="sidebar-bottom">
+            <a href="mailto:jacobyosef98@gmail.com">jacobyosef98@gmail.com</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="project-container">
+
+            <!-- Header -->
+            <header class="project-header">
+                <h1>Viscerate</h1>
+                <div class="project-meta-tags">
+                    <span class="meta-tag">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        17 People
+                    </span>
+                    <span class="meta-tag">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        7 Weeks
+                    </span>
+                    <span class="meta-tag">
+                        <img src="images/unreal_icon.png" alt="Unreal Icon">
+                        Unreal Engine
+                    </span>
+                    <span class="meta-tag">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        2025
+                    </span>
+                </div>
+            </header>
+
+            <!-- Overview -->
+            <section class="project-section">
+                <div class="feature-showcase overview-showcase">
+                    <div class="feature-text">
+                        <h2>Overview</h2>
+                        <p>
+                            Viscerate is a fast-paced FPS roguelite focused on fluid movement,
+                            modular builds, and punishing-but-fair combat. Players craft powerful
+                            synergies through weapon evolutions and over 40 upgrade modules while
+                            fighting through a gritty, bio-punk industrial world.
+                            <br><br>
+                            This game was developed during a 7-week group project and my main responsibilities were technical & gameplay design, in addition to some level design. 
+                        </p>
+                    </div>
+                    <div class="main-visual-block">
+                        <div class="main-visual">
+                            <!-- Gameplay Trailer -->
+                            <video autoplay loop muted playsinline controls>
+                                <source src="videos/Viscerate/Viscerate_Trailer.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <a href="https://futuregames.itch.io/viscerate" target="_blank" class="itch-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 245.371 220.736" class="itch-icon">
+                                <path d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.1 73.86c13.399 0 24.108-11.716 24.108-25.046 0 13.33 10.735 25.046 24.108 25.046 13.399 0 24.108-11.716 24.108-25.046 0 13.33 10.735 25.046 24.134 25.046 13.399 0 24.108-11.716 24.108-25.046 0 13.33 10.709 25.046 24.108 25.046s24.108-11.716 24.108-25.046c0 13.33 10.709 25.046 24.108 25.046 10.665 0 23.1-11.716 23.1-25.046V38.298c-.2-6.353-21.287-30.578-31.964-36.933C180.118 1.365 0 1.365 0 1.365h31.99z" />
+                                <path d="M23.1 75.859c-13.399 0-24.108 11.742-24.108 25.046v58.838c0 13.33 10.709 25.046 24.108 25.046h39.939c0-13.055 10.735-24.108 24.134-24.108 13.399 0 24.108 11.053 24.108 24.108h43.535c0-13.055 10.709-24.108 24.108-24.108 13.399 0 24.108 11.053 24.108 24.108h39.939c13.399 0 24.108-11.716 24.108-25.046v-58.838c0-13.304-10.709-25.046-24.108-25.046-13.399 0-24.108 11.742-24.108 25.046 0-13.304-10.709-25.046-24.108-25.046-13.399 0-24.108 11.742-24.108 25.046 0-13.304-10.709-25.046-24.134-25.046-13.399 0-24.108 11.742-24.108 25.046 0-13.304-10.709-25.046-24.108-25.046s-24.108 11.742-24.108 25.046c0-13.304-10.709-25.046-24.108-25.046z" />
+                                <path d="M87.173 162.781c-13.399 0-24.134 11.053-24.134 24.108v19.818c0 13.33 10.735 24.108 24.134 24.108h24.108c13.399 0 24.108-10.778 24.108-24.108v-19.818c0-13.055-10.709-24.108-24.108-24.108H87.173zm83.427 0c-13.399 0-24.108 11.053-24.108 24.108v19.818c0 13.33 10.709 24.108 24.108 24.108h24.108c13.399 0 24.108-10.778 24.108-24.108v-19.818c0-13.055-10.709-24.108-24.108-24.108H170.6z" />
+                            </svg>
+                            Download on itch
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Role & Contributions -->
+            <section class="project-section" id="role-and-contributions">
+                <h2>My Role & Contributions</h2>
+                <ul class="roles-list">
+                    <li>Gameplay Design & Implementation</li>
+                    <li>Boss Design & Implementation</li>
+                    <li>Level Design (Supporting Role)</li>
+                </ul>
+
+                <div class="contribution-tags">
+                    <a href="#gameplay-section" class="contribution-tag">Gameplay Systems</a>
+                    <a href="#boss-section" class="contribution-tag">Boss Design</a>
+                    <a href="#level-section" class="contribution-tag">Level Design</a>
+                </div>
+            </section>
+
+            <!-- Gameplay Systems -->
+            <section class="project-section" id="gameplay-section">
+                <h2>Gameplay</h2>
+
+                <div class="feature-text-full">
+                    <h3>Gameplay Design Philosophy</h3>
+                    <p>
+                        My gameplay focus was on enhancing second-to-second combat by giving players tools
+                        that reward aggression and improvisation. I aimed to increase player expression
+                        through environmental interaction and movement systems.
+                    </p>
+                </div>
+
+                <!-- Explosive Barrels -->
+                <div class="feature-showcase">
+                    <div class="feature-text">
+                        <h3>Explosive Barrels</h3>
+                        <div class="design-process-block">
+                            <h4>The Feature</h4>
+                            <p>I introduced explosive barrels as environmental hazards to make combat spaces more interactive, and for some gameplay variety.</p>
+                            <h4>The Problem</h4>
+                            <p>Playtests showed that completely stationary barrels were a bit unutilized. Often, players had to lure enemies into the barrels range, which disrupted the fast paced nature of the game.</p>
+                            <h4>The Solution</h4>
+                            <p>I allowed players to melee-kick barrels, launching them into enemies. Making them explode on impact turned them into a fast, skill-based combat tool that rewarded aggressive repositioning and felt very satisfying.</p>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <!-- Barrel Gameplay Clip -->
+                        <video autoplay loop muted playsinline>
+                            <source src="videos/Viscerate/Barrel_DirectImpact.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Jump Pads -->
+                <div class="feature-showcase reverse">
+                    <div class="feature-text">
+                        <h3>Jump Pads</h3>
+                        <div class="design-process-block">
+                            <h4>The Feature</h4>
+                            <p>To complement the game's vertical level design, I implemented jump pads to improve traversal and help players maintain combat momentum.</p>
+                            <h4>The Problem</h4>
+                            <p>During testing, it became clear that players could abuse the jump pads to endlessly kite enemies from above, removing any sense of danger.</p>
+                            <h4>The Solution</h4>
+                            <p>I added a short cooldown to each jump pad after use, which is communicated through a simple blinking material effect. Players could now use them to get out of immediate danger, while not being able to completely abuse it.</p>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <!-- Jump Pad Traversal -->
+                        <video autoplay loop muted playsinline>
+                            <source src="videos/Viscerate/JumpPad.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Boss & Mini-Boss -->
+            <section class="project-section" id="boss-section">
+                <h2>Boss & Mini-Boss Design</h2>
+
+                <div class="feature-text-full">
+                    <!--<h3>Taking Ownership Late in Production</h3>-->
+                    <p>
+                        Initially, I was responsible only for the main boss and elite enemy design.
+                        Late in development, I also took over full behavior and ability implementation
+                        due to production challenges and time limitations.
+                    </p>
+                </div>
+
+                <!-- Mini-Boss -->
+                <div class="feature-showcase">
+                    <div class="feature-text">
+                        <h3>Brute Mini-Boss</h3>
+                        <p>
+                            The Brute was originally planned as a stronger standard enemy, but
+                            its signature charge-based ability conflicted with the game's level design which started becoming more vertical.
+                            I therefore restructured it into a mini-boss with a dedicated arena room.
+                        </p>
+                    </div>
+                    <!-- Mini-Boss Gallery -->
+                    <div class="enemy-showcase-gallery">
+                        <div class="gallery-layout-container">
+                            <div class="gallery-main-player">
+                                <video class="gallery-video active" autoplay loop muted playsinline controls>
+                                    <source src="videos/Viscerate/Charge.mp4" type="video/mp4">
+                                </video>
+                                <video class="gallery-video" autoplay loop muted playsinline controls></video>
+                            </div>
+                            <div class="gallery-description-panel">
+                                <h3 id="mini-boss-gallery-title">Charge</h3>
+                                <p id="mini-boss-gallery-description">The Brute charges at the player, dealing heavy damage on impact. A well-timed dodge causes it to crash into a wall which stuns it, creating an opening for attack by exposing a weak point.</p>
+                            </div>
+                        </div>
+                        <div class="gallery-previews-wrapper">
+                            <div class="gallery-previews">
+                                <div class="preview-item active" data-gallery="mini-boss" data-video-src="videos/Viscerate/Charge.mp4" data-title="Charge" data-description="The Brute charges at the player, dealing heavy damage on impact. Crashing into a wall stuns it, creating an opening for attack.">
+                                    <video muted playsinline><source src="videos/Viscerate/Charge.mp4" type="video/mp4"></video>
+                                    <span>Charge</span>
+                                </div>
+                                <div class="preview-item" data-gallery="mini-boss" data-video-src="videos/Viscerate/Throw.mp4" data-title="Throw" data-description="The Brute grabs a nearby NPC from the audience and hurls it at the player, dealing damage on impact.">
+                                    <video muted playsinline><source src="videos/Viscerate/Throw.mp4" type="video/mp4"></video>
+                                    <span>Throw</span>
+                                </div>
+                                <div class="preview-item" data-gallery="mini-boss" data-video-src="videos/Viscerate/Enrage.mp4" data-title="Enrage" data-description="At low health, the Brute becomes enraged, increasing its movement speed and attack frequency for a final, intense phase.">
+                                    <video muted playsinline><source src="videos/Viscerate/Enrage.mp4" type="video/mp4"></video>
+                                    <span>Enrage</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final Boss -->
+                <div class="feature-showcase reverse">
+                    <div class="feature-text">
+                        <h3>Final Boss - The Collective Heart</h3>
+                        <p>
+                            Due to time and resource constraints, we opted out of an overly complex final boss design. However, I thought it was important to have an appropriately climatic ending to the game. The Collective Heart was the solution - a passive boss that serves as
+                            the source that sustains all the enemies in the game.
+                        </p>
+                        <p>
+                            The fight is structured into 3 phases, combining enemy waves,
+                            environmental attacks, and escalating beam attacks to create a simple, yet high-intensity
+                            finale.
+                        </p>
+                    </div>
+                    <!-- Final Boss Gallery -->
+                    <div class="enemy-showcase-gallery">
+                        <div class="gallery-layout-container">
+                            <div class="gallery-main-player">
+                                <video class="gallery-video active" autoplay loop muted playsinline controls>
+                                    <source src="videos/Viscerate/Rain.mp4" type="video/mp4">
+                                </video>
+                                <video class="gallery-video" autoplay loop muted playsinline controls></video>
+                            </div>
+                            <div class="gallery-description-panel">
+                                <h3 id="final-boss-gallery-title">Raining projectiles</h3>
+                                <p id="final-boss-gallery-description">The boss rains projectiles that the player has to dodge, forcing the player to stay mobile.</p>
+                            </div>
+                        </div>
+                        <div class="gallery-previews-wrapper">
+                            <div class="gallery-previews">
+                                <div class="preview-item active" data-gallery="final-boss" data-video-src="videos/Viscerate/Rain.mp4" data-title="Raining projectiles" data-description="The boss rains projectiles that the player has to dodge, forcing the player to stay mobile.">
+                                    <video muted playsinline><source src="videos/Viscerate/Rain.mp4" type="video/mp4"></video>
+                                    <span>Raining projectiles</span>
+                                </div>
+                                <div class="preview-item" data-gallery="final-boss" data-video-src="videos/Viscerate/Beam1.mp4" data-title="Beams" data-description="The boss fires out beams in quick bursts around itself.">
+                                    <video muted playsinline><source src="videos/Viscerate/Beam1.mp4" type="video/mp4"></video>
+                                    <span>Beams</span>
+                                </div>
+                                <div class="preview-item" data-gallery="final-boss" data-video-src="videos/Viscerate/FloorBreak.mp4" data-title="Phase 3" data-description="The boss causes the floor to collapse, sending down itself, the player and the remaining enemies onto a platform below, initiating phase 3.">
+                                    <video muted playsinline><source src="videos/Viscerate/FloorBreak.mp4" type="video/mp4"></video>
+                                    <span>Phase 3</span>
+                                </div>
+                                <div class="preview-item" data-gallery="final-boss" data-video-src="videos/Viscerate/Beam2.mp4" data-title="Enhanced Beam" data-description="In its final phase, the beam is altered from its orignal form to force players to adapt to a new pattern and keep them on their toes.">
+                                    <video muted playsinline><source src="videos/Viscerate/Beam2.mp4" type="video/mp4"></video>
+                                    <span>Enhanced Beam</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Level Design -->
+            <section class="project-section" id="level-section">
+                <h2>Level Design (Supporting Role)</h2>
+
+                <div class="feature-text-full">
+                    <p>
+                        While not my primary responsibility, I designed a few rooms in the game. These are the two rooms that were set dressed in time for launch.
+                </div>
+
+                <div class="full-width-visual">
+                    <!-- Arena Screenshot -->
+                    <img src="images/viscerate/elite_arena.png">
+                </div>
+            </section>
+
+            <!-- Reflection -->
+            <section class="project-section" id="reflection-section">
+                <h2>Reflection</h2>
+                <p>
+                    
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Lightbox container -->
+    <div id="lightbox-overlay" class="lightbox-overlay">
+        <img id="lightbox-image" class="lightbox-content" src="" alt="Enlarged view">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scrolling for contribution links + brief subtitle highlight
+            document.querySelectorAll('.contribution-tag').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (!targetElement) return;
+
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    // Wait for 500ms (0.5s) before applying the highlight
+                    setTimeout(() => {
+                        const subtitles = targetElement.querySelectorAll('h3, h4');
+                        if (subtitles.length === 0) return;
+
+                        subtitles.forEach(subtitle => {
+                            // Restart the animation reliably on each subtitle
+                            subtitle.classList.remove('highlight');
+                            void subtitle.offsetWidth; // force reflow so animation can replay
+                            subtitle.classList.add('highlight');
+
+                            // Remove the class after the animation so it can be triggered again
+                            setTimeout(() => {
+                                subtitle.classList.remove('highlight');
+                            }, 1600); // match CSS (1.5s) + small buffer
+                        });
+                    }, 500); // 0.5 second delay
+                });
+            });
+
+            // --- Image Lightbox Logic ---
+            const lightboxOverlay = document.getElementById('lightbox-overlay');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const imagesToEnlarge = document.querySelectorAll('.feature-visual img, .full-width-visual img');
+
+            imagesToEnlarge.forEach(img => {
+                img.addEventListener('click', () => {
+                    lightboxImage.src = img.src;
+                    lightboxOverlay.classList.add('visible');
+                });
+            });
+
+            // Hide lightbox when clicking on the overlay
+            lightboxOverlay.addEventListener('click', () => {
+                lightboxOverlay.classList.remove('visible');
+            });
+
+
+            // Blueprint Viewer Logic
+            document.querySelectorAll('.blueprint-toggle').forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const viewer = toggle.closest('.blueprint-container').querySelector('.blueprint-viewer');
+
+                    if (viewer) {
+                        const isVisible = viewer.classList.toggle('visible');
+                        toggle.textContent = isVisible ? toggle.dataset.hideText : toggle.dataset.showText;
+                    }
+                });
+            });
+
+            // Generic Gallery Logic
+            function initializeGallery(gallerySelector) {
+                const galleryContainer = document.querySelector(gallerySelector);
+                if (!galleryContainer) return;
+
+                const mainPlayerContainer = galleryContainer.querySelector('.gallery-main-player');
+                const previews = galleryContainer.querySelectorAll('.preview-item');
+                const galleryTitle = galleryContainer.querySelector('.gallery-description-panel h3');
+                const galleryDescription = galleryContainer.querySelector('.gallery-description-panel p');
+
+                if (mainPlayerContainer && previews.length > 0) {
+                    const videoPlayers = mainPlayerContainer.querySelectorAll('.gallery-video');
+                    let activePlayerIndex = 0;
+
+                    previews.forEach(preview => {
+                        preview.addEventListener('click', () => {
+                            if (preview.classList.contains('active')) return;
+
+                            const videoSrc = preview.dataset.videoSrc;
+                            const title = preview.dataset.title;
+                            const description = preview.dataset.description;
+
+                            if (galleryTitle) galleryTitle.textContent = title;
+                            if (galleryDescription) galleryDescription.textContent = description;
+
+                            const currentPlayer = videoPlayers[activePlayerIndex];
+                            const nextPlayerIndex = (activePlayerIndex + 1) % 2;
+                            const nextPlayer = videoPlayers[nextPlayerIndex];
+
+                            nextPlayer.src = videoSrc;
+                            nextPlayer.load();
+
+                            const playNextVideo = () => {
+                                nextPlayer.play();
+                                nextPlayer.classList.add('active');
+                                currentPlayer.classList.remove('active');
+                                activePlayerIndex = nextPlayerIndex;
+
+                                setTimeout(() => {
+                                    currentPlayer.pause();
+                                    currentPlayer.src = "";
+                                }, 500);
+
+                                nextPlayer.removeEventListener('canplay', playNextVideo);
+                            };
+
+                            nextPlayer.addEventListener('canplay', playNextVideo);
+
+                            // Deactivate other previews in the same gallery
+                            galleryContainer.querySelectorAll('.preview-item').forEach(p => p.classList.remove('active'));
+                            preview.classList.add('active');
+                        });
+                    });
+                }
+            }
+
+            initializeGallery('.feature-showcase:has(.preview-item[data-gallery="mini-boss"]) .enemy-showcase-gallery');
+            initializeGallery('.feature-showcase:has(.preview-item[data-gallery="final-boss"]) .enemy-showcase-gallery');
+
+
+            // Interactive Ability Showcase Logic
+            const showcases = document.querySelectorAll('.ability-showcase-interactive');
+            showcases.forEach(showcase => {
+                const description = showcase.querySelector('.ability-description');
+                const buttons = showcase.querySelectorAll('.mode-btn');
+                const spVideo = showcase.querySelector('.sp-video');
+                const coopVideo = showcase.querySelector('.coop-video');
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const mode = button.dataset.mode;
+                        let activeVideo, inactiveVideo;
+
+                        if (mode === 'sp') {
+                            activeVideo = spVideo;
+                            inactiveVideo = coopVideo;
+                        } else {
+                            activeVideo = coopVideo;
+                            inactiveVideo = spVideo;
+                        }
+
+                        activeVideo.classList.add('active-video');
+                        inactiveVideo.classList.remove('active-video');
+
+                        activeVideo.currentTime = 0;
+                        activeVideo.play();
+                        inactiveVideo.pause();
+
+                        description.textContent = button.dataset.description;
+
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                    });
+                });
+            });
+
+            // Scrapped Abilities Gallery Logic (Smooth Transition)
+            const scrappedGalleryContainer = document.querySelector('#scrapped-abilities .gallery-main-player');
+            const scrappedPreviews = document.querySelectorAll('#scrapped-abilities .preview-item');
+
+            if (scrappedGalleryContainer && scrappedPreviews.length > 0) {
+                const videoPlayers = scrappedGalleryContainer.querySelectorAll('.gallery-video');
+                let activePlayerIndex = 0;
+
+                scrappedPreviews.forEach(preview => {
+                    preview.addEventListener('click', () => {
+                        if (preview.classList.contains('active')) return;
+
+                        const videoSrc = preview.dataset.videoSrc;
+
+                        const currentPlayer = videoPlayers[activePlayerIndex];
+                        const nextPlayerIndex = (activePlayerIndex + 1) % 2;
+                        const nextPlayer = videoPlayers[nextPlayerIndex];
+
+                        nextPlayer.src = videoSrc;
+                        nextPlayer.load();
+
+                        const playNextVideo = () => {
+                            nextPlayer.play();
+
+                            nextPlayer.classList.add('active');
+                            currentPlayer.classList.remove('active');
+
+                            activePlayerIndex = nextPlayerIndex;
+
+                            setTimeout(() => {
+                                currentPlayer.pause();
+                                currentPlayer.src = "";
+                            }, 500);
+
+                            nextPlayer.removeEventListener('canplay', playNextVideo);
+                        };
+
+                        nextPlayer.addEventListener('canplay', playNextVideo);
+
+                        scrappedPreviews.forEach(p => p.classList.remove('active'));
+                        preview.classList.add('active');
+                    });
+                });
+            }
+        });
+
+        // Back to Top Button Logic
+        const backToTopButton = document.getElementById('back-to-top-btn');
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'auto'
+                });
+            });
+        }
+    </script>
+</body>
+</html>

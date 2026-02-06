@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoverboarder - Jacob Yosef</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/project.css">
+</head>
+<body>
+    <a href="index.html" class="back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        <span>Back to Projects</span>
+    </a>
+
+    <aside class="sidebar">
+        <a href="index.html" class="sidebar-top-link">
+            <div class="sidebar-top">
+                <img src="images/linkedinprof.jpg" alt="Jacob's Profile" class="profile-image">
+                <h1>Jacob Yosef</h1>
+                <h2>Technical & Systems Designer</h2>
+            </div>
+        </a>
+        <nav>
+            <a href="index.html#projects">Projects</a>
+            <a href="prototypes.html">Prototypes</a>
+            <a href="resume.html">Resume</a>
+            <a href="index.html#about-contact">Contact</a>
+        </nav>
+        <div class="sidebar-bottom">
+            <a href="mailto:jacobyosef98@gmail.com">jacobyosef98@gmail.com</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="project-container">
+            <header class="project-header">
+                <h1>Hoverboarder</h1>
+                <!--<p style="font-size: 1.2rem; color: var(--secondary-text); margin-top: 0.5rem;">
+                    Open World Systems Design Prototype
+                </p>-->
+                <div class="project-meta-tags">
+                    <span class="meta-tag">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Solo
+                    </span>
+                    <span class="meta-tag">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        3 Weeks
+                    </span>
+                    <span class="meta-tag">
+                        <img src="images/unreal_icon.png" alt="Unreal Icon">
+                        Unreal Engine
+                    </span>
+                    <span class="meta-tag">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        2026
+                    </span>
+                </div>
+            </header>
+
+            <!-- Project Overview & Trailer -->
+            <section class="project-section">
+                <h2>Overview</h2>
+                <div class="feature-showcase overview-showcase">
+                    <div class="feature-text">
+                        <p>
+                            Hoverboarder is an open-world hoverboarding prototype developed during a 3-week Systems Design course. Rather than polishing a single mechanic or visuals to perfection, the goal was to design a cohesive set of systems that support a complete gameplay loop in an open-world context.
+                        </p>
+                        <p>
+                            The scope of the open world is intentionally small, but the focus is on systemic depth and flexibility. All major systems are built around a single core pillar: physics-based hoverboarding traversal that enables emergent gameplay and player expression.
+                        </p>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="main-visual-block">
+                            <div class="main-visual">
+                                <!-- Gameplay Trailer -->
+                                <video autoplay loop muted playsinline controls>
+                                    <source src="videos/Hoverboarder/Hoverboard_Trailer.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <a href="https://jacob-yosef.itch.io/hoverboarder" target="_blank" class="itch-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 245.371 220.736" class="itch-icon">
+                                    <path d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.1 73.86c13.399 0 24.108-11.716 24.108-25.046 0 13.33 10.735 25.046 24.108 25.046 13.399 0 24.108-11.716 24.108-25.046 0 13.33 10.735 25.046 24.134 25.046 13.399 0 24.108-11.716 24.108-25.046 0 13.33 10.709 25.046 24.108 25.046s24.108-11.716 24.108-25.046c0 13.33 10.709 25.046 24.108 25.046 10.665 0 23.1-11.716 23.1-25.046V38.298c-.2-6.353-21.287-30.578-31.964-36.933C180.118 1.365 0 1.365 0 1.365h31.99z" />
+                                    <path d="M23.1 75.859c-13.399 0-24.108 11.742-24.108 25.046v58.838c0 13.33 10.709 25.046 24.108 25.046h39.939c0-13.055 10.735-24.108 24.134-24.108 13.399 0 24.108 11.053 24.108 24.108h43.535c0-13.055 10.709-24.108 24.108-24.108 13.399 0 24.108 11.053 24.108 24.108h39.939c13.399 0 24.108-11.716 24.108-25.046v-58.838c0-13.304-10.709-25.046-24.108-25.046-13.399 0-24.108 11.742-24.108 25.046 0-13.304-10.709-25.046-24.108-25.046-13.399 0-24.108 11.742-24.108 25.046 0-13.304-10.709-25.046-24.134-25.046-13.399 0-24.108 11.742-24.108 25.046 0-13.304-10.709-25.046-24.108-25.046s-24.108 11.742-24.108 25.046c0-13.304-10.709-25.046-24.108-25.046z" />
+                                    <path d="M87.173 162.781c-13.399 0-24.134 11.053-24.134 24.108v19.818c0 13.33 10.735 24.108 24.134 24.108h24.108c13.399 0 24.108-10.778 24.108-24.108v-19.818c0-13.055-10.709-24.108-24.108-24.108H87.173zm83.427 0c-13.399 0-24.108 11.053-24.108 24.108v19.818c0 13.33 10.709 24.108 24.108 24.108h24.108c13.399 0 24.108-10.778 24.108-24.108v-19.818c0-13.055-10.709-24.108-24.108-24.108H170.6z" />
+                                </svg>
+                                Download on itch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Key Features</h3>
+                <ul class="roles-list">
+                    <li>Physics-based Hoverboard Movement</li>
+                    <li>Hoverboard Upgrade System</li>
+                    <li>Data-driven Dialogue System</li>
+                    <li>Race System with modular race components</li>
+                    <li>Hoverboard Customization</li>
+                    <li>Interactive World Map</li>
+                </ul>
+
+                <div class="contribution-tags" style="margin-top: 1.5rem;">
+                    <a href="#hoverboard-movement" class="contribution-tag">Hoverboard Movement</a>
+                    <a href="#progression-upgrades" class="contribution-tag">Progression & Upgrades</a>
+                    <a href="#exploration-resources" class="contribution-tag">Exploration & Resources</a>
+                    <a href="#dialogue-system" class="contribution-tag">Dialogue System</a>
+                    <a href="#race-system" class="contribution-tag">Race System</a>
+                    <a href="#customization" class="contribution-tag">Customization</a>
+                    <a href="#world-map" class="contribution-tag">World Map</a>
+                </div>
+            </section>
+
+            <!-- Design Goals -->
+            <section id="design-goals" class="project-section">
+                <h2>Design Goals</h2>
+                <div class="feature-text-full">
+                    <ul>
+                        <li><strong>Design a physics-based traversal system that feels smooth and satisfying</strong></li>
+                        <li><strong>Build a progression system that reinforces mastery of movement and enhances the hoverboarding experience</strong></li>
+                        <li><strong>Create a complete open-world gameplay loop with limited development time</strong></li>
+                        <li><strong>Support player choice, creativity, and expression</strong></li>
+                        <li><strong>Create modular / data-driven systems to enable quick iteration and scalability</strong></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Hoverboard Movement -->
+            <section id="hoverboard-movement" class="project-section">
+                <h2>Physics-Based Hoverboard Movement</h2>
+                <div class="feature-showcase">
+                    <div class="feature-text">
+                        <p>
+                            The main system and the heart of the prototype is the Hoverboard Movement. The hoverboard uses multiple line traces to detect distance from the ground.
+                            Each trace calculates a push force based on that distance, allowing the board to dynamically adjust to the terrain.
+                        </p>
+
+                    </div>
+                    <div class="feature-visual">
+                        <video autoplay loop muted playsinline>
+                            <source src="videos/Hoverboarder/hoverboard_movement.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progression & Upgrades -->
+            <section id="progression-upgrades" class="project-section">
+                <h2>Progression & Upgrade Systems</h2>
+                <div class="feature-text-full">
+                    <h3>Stat-Based Upgrades</h3>
+                    <p>
+                        The hoverboard features two core upgradable stats: <strong>Acceleration</strong> and <strong>Rotation Speed</strong>. Upgrading them is essential for long distance jumps and making tight corners.
+                    </p>
+                    <h3>Active Ability Upgrades</h3>
+                    <p>
+                        Hoverboard abilities were designed to create distinct movement options that target different traversal challenges. Each ability opens up new ways to navigate the world and tackle races.
+                    </p>
+                </div>
+
+                <!-- Active Abilities Gallery -->
+                <div class="enemy-showcase-gallery">
+                    <div class="gallery-layout-container">
+                        <div class="gallery-main-player">
+                            <video class="gallery-video active" loop muted playsinline data-ability="nitro">
+                                <source src="videos/Hoverboarder/nitro_ability.mp4" type="video/mp4">
+                            </video>
+                            <video class="gallery-video" loop muted playsinline data-ability="thruster">
+                                <source src="videos/Hoverboarder/thruster_ability.mp4" type="video/mp4">
+                            </video>
+                            <video class="gallery-video" loop muted playsinline data-ability="magnet">
+                                <source src="videos/Hoverboarder/magnet_ability.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="gallery-description-panel">
+                            <h3 class="ability-title">Nitro Boost</h3>
+                            <p class="ability-description">
+                                Provides additional forward velocity with limited charge. Useful in many areas of the game, especially speed-focused races and long jumps.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="gallery-previews-wrapper">
+                        <div class="gallery-previews">
+                            <div class="preview-item active" data-ability="nitro">
+                                <video loop muted playsinline>
+                                    <source src="videos/Hoverboarder/nitro_ability.mp4" type="video/mp4">
+                                </video>
+                                <span>Nitro Boost</span>
+                            </div>
+                            <div class="preview-item" data-ability="thruster">
+                                <video loop muted playsinline>
+                                    <source src="videos/Hoverboarder/thruster_ability.mp4" type="video/mp4">
+                                </video>
+                                <span>Thruster</span>
+                            </div>
+                            <div class="preview-item" data-ability="magnet">
+                                <video loop muted playsinline>
+                                    <source src="videos/Hoverboarder/magnet_ability.mp4" type="video/mp4">
+                                </video>
+                                <span>Magnesis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Exploration & Resources -->
+            <section id="exploration-resources" class="project-section">
+                <h2>Open World Exploration & Resources</h2>
+                <div class="feature-showcase">
+                    <div class="feature-text">
+                        <h3>Scrap Collection</h3>
+                        <p>
+                            Scrap serves as the primary upgrade currency and is scattered throughout the world. Some scrap is placed openly, while other pickups require timed jumps or precise movement. This encourages players to explore between races, enhancing the second-to-second gameplay.
+                        </p>
+                        <h3>Environmental Interaction: Turtles</h3>
+                        <p>
+                            Turtles are scattered throughout the world and act as dynamic environmental elements. When collided with, they launch the player into the air. Depending on the situation, turtles can function as obstacles to avoid or tools for reaching new locations, which is explored in certain races.
+                        </p>
+                    </div>
+                    <div class="feature-visual">
+                        <video autoplay loop muted playsinline>
+                            <source src="videos/Hoverboarder/exploration.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dialogue System -->
+            <section id="dialogue-system" class="project-section">
+                <h2>NPC & Dialogue System</h2>
+                <div class="feature-showcase reverse">
+                    <div class="feature-text">
+                        <h3>Flexible Dialogue Framework</h3>
+                        <p>
+                            To support the open world, mainly the races, I implemented a dialogue system designed for rapid prototyping. Dialogue content is driven through data tables, and any NPC can be assigned dialogue with minimal setup.
+                        </p>
+                        <h3>Dialogue States & Events</h3>
+                        <p>
+                            The system uses a dialogue state enum to track NPC states and an event system triggered by player responses. This allows dialogue choices to affect NPC behavior and unlock different outcomes, while remaining flexible enough to support future expansion.
+                        </p>
+                        <p>
+                            This data-driven approach allowed me to quickly populate the world with NPCs, provide context for progression and direct players toward races and upgrade stations.
+                        </p>
+                    </div>
+                    <div class="feature-visual">
+                        <video autoplay loop muted playsinline>
+                            <source src="videos/Hoverboarder/dialogue.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Race System -->
+            <section id="race-system" class="project-section">
+                <h2>Race System Design</h2>
+                <div class="feature-text-full">
+                    <p>
+                        To complete a race, players must pass through all checkpoints, reach the finish, and beat the specified time. Successful completion rewards Scrap, blueprints, and/or cosmetic unlocks.
+                    </p>
+                    <p>
+                        Each race was designed to highlight a different aspect of hoverboarding mastery. The modular race component system allowed me to quickly create varied experiences for the different races.
+                    </p>
+                </div>
+
+                <!-- Race Variety Gallery -->
+                <div class="enemy-showcase-gallery">
+                    <div class="gallery-layout-container">
+                        <div class="gallery-main-player">
+                            <video class="gallery-video active" loop muted playsinline data-race="speed">
+                                <source src="videos/Hoverboarder/race_speed.mp4" type="video/mp4">
+                            </video>
+                            <video class="gallery-video" loop muted playsinline data-race="precision">
+                                <source src="videos/Hoverboarder/race_precision.mp4" type="video/mp4">
+                            </video>
+                            <video class="gallery-video" loop muted playsinline data-race="terrain">
+                                <source src="videos/Hoverboarder/race_terrain.mp4" type="video/mp4">
+                            </video>
+                            <video class="gallery-video" loop muted playsinline data-race="thruster">
+                                <source src="videos/Hoverboarder/race_thruster.mp4" type="video/mp4">
+                            </video>
+                            <video class="gallery-video" loop muted playsinline data-race="turtle">
+                                <source src="videos/Hoverboarder/race_turtle.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="gallery-description-panel">
+                            <h3 class="race-title">Speed-Focused Race</h3>
+                            <p class="race-description">
+                                For players who master acceleration and nitro. These races reward quick reflexes and maintaining high speeds through open areas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="gallery-previews-wrapper">
+                        <div class="gallery-previews">
+                            <div class="preview-item active" data-race="speed">
+                                <video loop muted playsinline>
+                                    <source src="videos/Hoverboarder/race_speed.mp4" type="video/mp4">
+                                </video>
+                                <span>Speed Race</span>
+                            </div>
+                            <div class="preview-item" data-race="precision">
+                                <video loop muted playsinline>
+                                    <source src="videos/Hoverboarder/race_precision.mp4" type="video/mp4">
+                                </video>
+                                <span>Precision Race</span>
+                            </div>
+                            <div class="preview-item" data-race="terrain">
+                                <video loop muted playsinline>
+                                    <source src="videos/Hoverboarder/race_terrain.mp4" type="video/mp4">
+                                </video>
+                                <span>Terrain Race</span>
+                            </div>
+                            <div class="preview-item" data-race="thruster">
+                                <video loop muted playsinline>
+                                    <source src="videos/Hoverboarder/race_thruster.mp4" type="video/mp4">
+                                </video>
+                                <span>Thruster Race</span>
+                            </div>
+                            <div class="preview-item" data-race="turtle">
+                                <video loop muted playsinline>
+                                    <source src="videos/Hoverboarder/race_turtle.mp4" type="video/mp4">
+                                </video>
+                                <span>Turtle Race</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customization -->
+            <section id="customization" class="project-section">
+                <h2>Player Expression: Hoverboard Customization</h2>
+                <div class="feature-showcase reverse">
+                    <div class="feature-text">
+                        <p>
+                            To complement overall progression, I added a hoverboard customization system. Players can change the board's material, hover VFX, and nitro VFX. I wanted to reinforce player expression, which felt especially important in an open-world setting.
+                        </p>
+                        <p>
+                            Customization options are unlocked through hoverboard level progression and race completion, allowing players to create a hoverboard that feels unique and reflects their achievements.
+                        </p>
+                    </div>
+                    <div class="feature-visual">
+                        <video autoplay loop muted playsinline>
+                            <source src="videos/Hoverboarder/customization.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <!-- World Map -->
+            <section id="world-map" class="project-section">
+                <h2>World Map & Player Guidance</h2>
+                <div class="feature-showcase">
+                    <div class="feature-text">
+                        <p>
+                            Even with a relatively small open world, finding races and upgrade stations could be difficult without guidance. To address this, I created a map system that displays all races in the world and uses color-coding to differentiate available and locked races.
+                        </p>
+                        <h3>Map Features:</h3>
+                        <ul>
+                            <li><strong>Dynamic Race Markers:</strong> Available races highlighted in one color, locked races in another</li>
+                            <li><strong>Requirement Tooltips:</strong> Hovering over locked races displays required upgrades/stats</li>
+                            <li><strong>Upgrade Stations:</strong> Shop locations clearly indicated for easy access</li>
+                        </ul>
+                        <p>
+                            <br>
+                            The map connects all the systems and helps with pacing by guiding the player to points of interest.
+                            </br>
+                        </p>
+                    </div>
+                    <div class="feature-visual">
+                        <video autoplay loop muted playsinline>
+                            <source src="videos/Hoverboarder/map.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Takeaways -->
+            <section id="key-takeaways" class="project-section">
+                <h2>Reflection</h2>
+                <div class="feature-text-full">
+                    <!--<ul>
+                        <li><strong>System interdependence creates depth:</strong> Rather than isolated features, interconnected systems create emergent gameplay and natural progression</li>
+                        <li><strong>Data-driven architecture enables rapid iteration:</strong> Using data tables and components allowed me to quickly add content and test different configurations</li>
+                        <li><strong>Physics-based movement requires careful tuning:</strong> Small adjustments to hover forces and acceleration dramatically impact player feel�iteration is essential</li>
+                        <li><strong>Player guidance without hand-holding:</strong> The map and upgrade requirements provide direction while preserving player agency</li>
+                        <li><strong>Scope management is crucial:</strong> Focusing on breadth and systemic interaction over individual polish allowed me to create a more complete experience that demonstrates systems thinking</li>
+                    </ul>
+                    <p>
+                        Hoverboarder taught me valuable lessons about designing interconnected systems and creating cohesive gameplay loops. The project demonstrated that with smart architecture and clear design goals, it's possible to create an engaging open-world experience even within tight time constraints.
+                    </p>-->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        // Back to top button functionality
+        const backToTopBtn = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        // Smooth scrolling for navigation and contribution tags
+        document.querySelectorAll('nav a, .contribution-tag').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Active Abilities Gallery functionality
+        const abilityDescriptions = {
+            nitro: {
+                title: 'Nitro Boost',
+                description: 'Provides additional forward velocity with limited charge. Useful in many areas of the game, especially speed-focused races and long jumps.'
+            },
+            thruster: {
+                title: 'Thruster',
+                description: 'Launches the hoverboard vertically when close to the ground, like a jump. Enables vertical exploration and climb-based challenges.'
+            },
+            magnet: {
+                title: 'Magnesis',
+                description: 'Toggles the hoverboard forces from push to pull. This allows players to stick to the ground, ride steep terrain, and re-stabilize the board.'
+            }
+        };
+
+        // Race Gallery functionality
+        const raceDescriptions = {
+            speed: {
+                title: 'Speed-Focused Race',
+                description: 'For players who master acceleration and nitro. These races reward quick reflexes and maintaining high speeds through open areas.'
+            },
+            precision: {
+                title: 'Precision & Control Race',
+                description: 'Requires careful maneuvering and controlled movement. Success depends on timing and accuracy rather than raw speed.'
+            },
+            terrain: {
+                title: 'Terrain-Based Challenge',
+                description: 'Uses slopes and elevation changes to test player understanding of the physics system and movement possibilities.'
+            },
+            thruster: {
+                title: 'Thruster-Specific Race',
+                description: 'Designed around vertical movement and the Thruster ability. Players must master timing and positioning to reach elevated checkpoints.'
+            },
+            turtle: {
+                title: 'Turtle Interaction Race',
+                description: 'Players must decide whether to avoid or exploit environmental hazards. Turtles can be both obstacles and tools for strategic advantage.'
+            }
+        };
+
+        // Setup ability gallery
+        const abilityPreviews = document.querySelectorAll('#progression-upgrades .preview-item');
+        const abilityVideos = document.querySelectorAll('#progression-upgrades .gallery-video');
+        const abilityTitle = document.querySelector('#progression-upgrades .ability-title');
+        const abilityDescription = document.querySelector('#progression-upgrades .ability-description');
+
+        abilityPreviews.forEach(preview => {
+            preview.addEventListener('click', () => {
+                const abilityType = preview.getAttribute('data-ability');
+
+                // Update active states
+                abilityPreviews.forEach(p => p.classList.remove('active'));
+                preview.classList.add('active');
+
+                // Update videos
+                abilityVideos.forEach(video => {
+                    video.classList.remove('active');
+                    video.pause();
+                    if (video.getAttribute('data-ability') === abilityType) {
+                        video.classList.add('active');
+                        video.play();
+                    }
+                });
+
+                // Update description
+                const info = abilityDescriptions[abilityType];
+                abilityTitle.textContent = info.title;
+                abilityDescription.textContent = info.description;
+            });
+        });
+
+        // Auto-play active ability video
+        const activeAbilityVideo = document.querySelector('#progression-upgrades .gallery-video.active');
+        if (activeAbilityVideo) activeAbilityVideo.play();
+
+        // Setup race gallery
+        const racePreviews = document.querySelectorAll('#race-system .preview-item');
+        const raceVideos = document.querySelectorAll('#race-system .gallery-video');
+        const raceTitle = document.querySelector('#race-system .race-title');
+        const raceDescription = document.querySelector('#race-system .race-description');
+
+        racePreviews.forEach(preview => {
+            preview.addEventListener('click', () => {
+                const raceType = preview.getAttribute('data-race');
+
+                // Update active states
+                racePreviews.forEach(p => p.classList.remove('active'));
+                preview.classList.add('active');
+
+                // Update videos
+                raceVideos.forEach(video => {
+                    video.classList.remove('active');
+                    video.pause();
+                    if (video.getAttribute('data-race') === raceType) {
+                        video.classList.add('active');
+                        video.play();
+                    }
+                });
+
+                // Update description
+                const info = raceDescriptions[raceType];
+                raceTitle.textContent = info.title;
+                raceDescription.textContent = info.description;
+            });
+        });
+
+        // Auto-play active race video
+        const activeRaceVideo = document.querySelector('#race-system .gallery-video.active');
+        if (activeRaceVideo) activeRaceVideo.play();
+    </script>
+</body>
+</html>

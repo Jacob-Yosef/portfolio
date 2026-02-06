@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bungeon | Jacob Yosef</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/prototype-detail.css">
+    <link rel="stylesheet" href="css/project.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <a href="index.html" class="sidebar-top-link">
+            <div class="sidebar-top">
+                <img src="images/linkedinprof.jpg" alt="Jacob's Profile" class="profile-image">
+                <h1>Jacob Yosef</h1>
+                <h2>Technical & Systems Designer</h2>
+            </div>
+        </a>
+        <nav>
+            <a href="index.html#projects">Projects</a>
+            <a href="prototypes.html">Prototypes</a>
+            <a href="resume.html">Resume</a>
+            <a href="index.html#about-contact">Contact</a>
+        </nav>
+        <div class="sidebar-bottom">
+            <a href="mailto:jacobyosef98@gmail.com">jacobyosef98@gmail.com</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="prototype-container">
+            <header class="prototype-header">
+                <button class="back-btn" onclick="location.href='prototypes.html'">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                    Back to Prototypes
+                </button>
+                <h1>The Bungeon</h1>
+                <p class="prototype-subtitle"></p>
+                <div class="prototype-meta-tags">
+                    <span class="meta-tag">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        14 People
+                    </span>
+                    <span class="meta-tag">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        4 Weeks
+                    </span>
+                    <span class="meta-tag">
+                        <img src="images/unity_icon.png" alt="Unity Icon">
+                        Unity
+                    </span>
+                    <span class="meta-tag">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        2025
+                    </span>
+                </div>
+            </header>
+
+            <section class="overview-section">
+                <div class="overview-content">
+                    <div class="overview-text">
+                        <h2>Overview</h2>
+                        <p>
+                            A small First Person Dungeon Crawler project where the player is held captive by an evil bunny. You must must feed it daily, while simultaneously trying to find a way to escape its lair.
+                            <br><br>
+                            The bungeon focuses mainly on puzzles but also has platforming, basic combat and a light narrative.
+                        </p>
+                    </div>
+                    <div class="main-visual-block">
+                        <div class="overview-video">
+                            <video controls autoplay loop muted playsinline>
+                                <source src="videos/Other/Bungeon_Trailer.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <a href="https://futuregames.itch.io/the-bungeon" target="_blank" class="itch-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 245.371 220.736" class="itch-icon">
+                                <path d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.1 73.86c13.399 0 24.108-11.716 24.108-25.046 0 13.33 10.735 25.046 24.108 25.046 13.399 0 24.108-11.716 24.108-25.046 0 13.33 10.735 25.046 24.134 25.046 13.399 0 24.108-11.716 24.108-25.046 0 13.33 10.709 25.046 24.108 25.046s24.108-11.716 24.108-25.046c0 13.33 10.709 25.046 24.108 25.046 10.665 0 23.1-11.716 23.1-25.046V38.298c-.2-6.353-21.287-30.578-31.964-36.933C180.118 1.365 0 1.365 0 1.365h31.99z" />
+                                <path d="M23.1 75.859c-13.399 0-24.108 11.742-24.108 25.046v58.838c0 13.33 10.709 25.046 24.108 25.046h39.939c0-13.055 10.735-24.108 24.134-24.108 13.399 0 24.108 11.053 24.108 24.108h43.535c0-13.055 10.709-24.108 24.108-24.108 13.399 0 24.108 11.053 24.108 24.108h39.939c13.399 0 24.108-11.716 24.108-25.046v-58.838c0-13.304-10.709-25.046-24.108-25.046-13.399 0-24.108 11.742-24.108 25.046 0-13.304-10.709-25.046-24.108-25.046-13.399 0-24.108 11.742-24.108 25.046 0-13.304-10.709-25.046-24.134-25.046-13.399 0-24.108 11.742-24.108 25.046 0-13.304-10.709-25.046-24.108-25.046s-24.108 11.742-24.108 25.046c0-13.304-10.709-25.046-24.108-25.046z" />
+                                <path d="M87.173 162.781c-13.399 0-24.134 11.053-24.134 24.108v19.818c0 13.33 10.735 24.108 24.134 24.108h24.108c13.399 0 24.108-10.778 24.108-24.108v-19.818c0-13.055-10.709-24.108-24.108-24.108H87.173zm83.427 0c-13.399 0-24.108 11.053-24.108 24.108v19.818c0 13.33 10.709 24.108 24.108 24.108h24.108c13.399 0 24.108-10.778 24.108-24.108v-19.818c0-13.055-10.709-24.108-24.108-24.108H170.6z" />
+                            </svg>
+                            Download on itch
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
