@@ -143,64 +143,60 @@
             <!-- Hoverboard Movement -->
             <section id="hoverboard-movement" class="project-section">
                 <h2>Physics-Based Hoverboard Movement</h2>
-                <div class="feature-showcase">
-                    <div class="feature-text">
-                        <p>
-                            The main system and the heart of the prototype is the Hoverboard Movement. With a big open world with high mountains and deep valleys, it was very important to achieve smooth and satisfying movement.
-                        </p>
+                <div class="feature-text-full">
+                    <p>
+                        The main system and the heart of the prototype is the Hoverboard Movement. With a big open world with high mountains and deep valleys, it was very important to achieve smooth and satisfying movement.
+                    </p>
+                </div>
+                <div class="enemy-showcase-gallery">
+                    <div class="gallery-layout-container">
+                        <div class="gallery-main-player">
+                            <video class="gallery-video active" loop muted playsinline data-physics="physics1">
+                                <source src="videos/Hoverboarder/Physics1.mp4" type="video/mp4">
+                            </video>
+                            <video class="gallery-video" loop muted playsinline data-physics="physics2">
+                                <source src="videos/Hoverboarder/Physics2.mp4" type="video/mp4">
+                            </video>
+                            <video class="gallery-video" loop muted playsinline data-physics="forward-trace">
+                                <source src="videos/Hoverboarder/ForwardLineTrace.mp4" type="video/mp4">
+                            </video>
+                            <video class="gallery-video" loop muted playsinline data-physics="current-physics">
+                                <source src="videos/Hoverboarder/Linetraces.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="gallery-description-panel">
+                            <h3 class="physics-title">First Iteration</h3>
+                            <p class="physics-description">
+                                Line traces in each corner detect ground distance and apply push forces based on that distance, allowing the board to dynamically adjust to the terrain.<br>
+                                <br>This first iteration was far from what I wanted physics-wise, but it was a good starting point.
+                            </p>
+                        </div>
                     </div>
-                    <div class="feature-visual">
-                        <div class="enemy-showcase-gallery">
-                            <div class="gallery-layout-container">
-                                <div class="gallery-main-player">
-                                    <video class="gallery-video active" loop muted playsinline data-physics="physics1">
-                                        <source src="videos/Hoverboarder/Physics1.mp4" type="video/mp4">
-                                    </video>
-                                    <video class="gallery-video" loop muted playsinline data-physics="physics2">
-                                        <source src="videos/Hoverboarder/Physics2.mp4" type="video/mp4">
-                                    </video>
-                                    <video class="gallery-video" loop muted playsinline data-physics="forward-trace">
-                                        <source src="videos/Hoverboarder/ForwardLineTrace.mp4" type="video/mp4">
-                                    </video>
-                                    <video class="gallery-video" loop muted playsinline data-physics="current-physics">
-                                        <source src="videos/Hoverboarder/Linetraces.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="gallery-description-panel">
-                                    <h3 class="physics-title">First Iteration</h3>
-                                    <p class="physics-description">
-                                        Line traces in each corner detect ground distance and apply push forces based on that distance, allowing the board to dynamically adjust to the terrain.<br>
-                                        <br>This first iteration was far from what I wanted physics-wise, but it was a good starting point.
-                                    </p>
-                                </div>
+                    <div class="gallery-previews-wrapper">
+                        <div class="gallery-previews">
+                            <div class="preview-item active" data-physics="physics1">
+                                <video loop muted playsinline>
+                                    <source src="videos/Hoverboarder/Physics1.mp4" type="video/mp4">
+                                </video>
+                                <span>First Iteration</span>
                             </div>
-                            <div class="gallery-previews-wrapper">
-                                <div class="gallery-previews">
-                                    <div class="preview-item active" data-physics="physics1">
-                                        <video loop muted playsinline>
-                                            <source src="videos/Hoverboarder/Physics1.mp4" type="video/mp4">
-                                        </video>
-                                        <span>First Iteration</span>
-                                    </div>
-                                    <div class="preview-item" data-physics="physics2">
-                                        <video loop muted playsinline>
-                                            <source src="videos/Hoverboarder/Physics2.mp4" type="video/mp4">
-                                        </video>
-                                        <span>Animations</span>
-                                    </div>
-                                    <div class="preview-item" data-physics="forward-trace">
-                                        <video loop muted playsinline>
-                                            <source src="videos/Hoverboarder/ForwardLineTrace.mp4" type="video/mp4">
-                                        </video>
-                                        <span>Forward Trace</span>
-                                    </div>
-                                    <div class="preview-item" data-physics="current-physics">
-                                        <video loop muted playsinline>
-                                            <source src="videos/Hoverboarder/Linetraces.mp4" type="video/mp4">
-                                        </video>
-                                        <span>Current Physics</span>
-                                    </div>
-                                </div>
+                            <div class="preview-item" data-physics="physics2">
+                                <video loop muted playsinline>
+                                    <source src="videos/Hoverboarder/Physics2.mp4" type="video/mp4">
+                                </video>
+                                <span>Animations</span>
+                            </div>
+                            <div class="preview-item" data-physics="forward-trace">
+                                <video loop muted playsinline>
+                                    <source src="videos/Hoverboarder/ForwardLineTrace.mp4" type="video/mp4">
+                                </video>
+                                <span>Forward Trace</span>
+                            </div>
+                            <div class="preview-item" data-physics="current-physics">
+                                <video loop muted playsinline>
+                                    <source src="videos/Hoverboarder/Linetraces.mp4" type="video/mp4">
+                                </video>
+                                <span>Current Physics</span>
                             </div>
                         </div>
                     </div>
@@ -282,7 +278,7 @@
                         </p>
                     </div>
                     <div class="feature-visual">
-                        <video autoplay loop muted playsinline>
+                        <video autoplay loop muted playsinline class="enlargeable">
                             <source src="videos/Hoverboarder/Scrap.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -293,10 +289,10 @@
             <section id="dialogue-system" class="project-section">
                 <h2>NPC & Dialogue System</h2>
 
-                <!-- Flexible Dialogue Framework -->
+                <!-- Flexible Dialogue System -->
                 <div class="feature-showcase reverse">
                     <div class="feature-text">
-                        <h3>Flexible Dialogue Framework</h3>
+                        <h3>Flexible Dialogue System</h3>
                         <p>
                             To support the open world, mainly the races, I implemented a dialogue system designed for rapid prototyping. Dialogue content is driven through data tables, and any NPC can be assigned dialogue with minimal setup.
                         </p>
@@ -305,7 +301,7 @@
                         </p>
                     </div>
                     <div class="feature-visual">
-                        <img src="images/Hoverboarder/DialogueTable.png" alt="Dialogue Data Table">
+                        <img src="images/Hoverboarder/DialogueTable.png" alt="Dialogue Data Table" class="enlargeable">
                     </div>
                 </div>
 
@@ -318,7 +314,7 @@
                         </p>
                     </div>
                     <div class="feature-visual">
-                        <video autoplay loop muted playsinline>
+                        <video autoplay loop muted playsinline class="enlargeable">
                             <source src="videos/Hoverboarder/NPC_Events.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -421,7 +417,7 @@
                         </p>
                     </div>
                     <div class="feature-visual">
-                        <video autoplay loop muted playsinline>
+                        <video autoplay loop muted playsinline class="enlargeable">
                             <source src="videos/Hoverboarder/Customization.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -449,7 +445,7 @@
                         </p>
                     </div>
                     <div class="feature-visual">
-                        <video autoplay loop muted playsinline>
+                        <video autoplay loop muted playsinline class="enlargeable">
                             <source src="videos/Hoverboarder/Map.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -472,6 +468,14 @@
 
         </div>
     </main>
+
+    </div>
+    </main>
+
+    <!-- Lightbox container -->
+    <div id="lightbox-overlay" class="lightbox-overlay">
+        <div id="lightbox-content" class="lightbox-content"></div>
+    </div>
 
     <script>
         // Back to top button functionality
@@ -501,6 +505,44 @@
                 }
             });
         });
+
+        // --- Image & Video Lightbox Logic ---
+        const lightboxOverlay = document.getElementById('lightbox-overlay');
+        const lightboxContent = document.getElementById('lightbox-content');
+        const mediaToEnlarge = document.querySelectorAll('.enlargeable');
+
+        mediaToEnlarge.forEach(media => {
+            media.addEventListener('click', () => {
+                lightboxContent.innerHTML = ''; // Clear previous content
+                let element;
+
+                if (media.tagName === 'VIDEO') {
+                    element = document.createElement('video');
+                    element.src = media.querySelector('source').src;
+                    element.autoplay = true;
+                    element.controls = true;
+                    element.loop = true;
+                    element.muted = false; // Unmute in lightbox
+                } else { // Assumes IMG tag
+                    element = document.createElement('img');
+                    element.src = media.src;
+                }
+
+                lightboxContent.appendChild(element);
+                lightboxOverlay.classList.add('visible');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
+        });
+
+        // Hide lightbox when clicking on the overlay
+        lightboxOverlay.addEventListener('click', (e) => {
+            if (e.target === lightboxOverlay) { // Only close if overlay is clicked, not content
+                lightboxOverlay.classList.remove('visible');
+                document.body.style.overflow = '';
+                lightboxContent.innerHTML = ''; // Stop video/remove content
+            }
+        });
+
 
         // Blueprint Viewer Logic
         document.querySelectorAll('.blueprint-toggle').forEach(toggle => {
