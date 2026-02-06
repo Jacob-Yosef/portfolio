@@ -292,18 +292,29 @@
             <!-- Dialogue System -->
             <section id="dialogue-system" class="project-section">
                 <h2>NPC & Dialogue System</h2>
+
+                <!-- Flexible Dialogue Framework -->
                 <div class="feature-showcase reverse">
                     <div class="feature-text">
                         <h3>Flexible Dialogue Framework</h3>
                         <p>
                             To support the open world, mainly the races, I implemented a dialogue system designed for rapid prototyping. Dialogue content is driven through data tables, and any NPC can be assigned dialogue with minimal setup.
                         </p>
+                        <p>
+                            This data-driven approach allowed me to quickly populate the world with NPCs, provide context for progression and direct players toward races and upgrade stations.
+                        </p>
+                    </div>
+                    <div class="feature-visual">
+                        <img src="images/Hoverboarder/DialogueTable.png" alt="Dialogue Data Table">
+                    </div>
+                </div>
+
+                <!-- Dialogue States & Events -->
+                <div class="feature-showcase">
+                    <div class="feature-text">
                         <h3>Dialogue States & Events</h3>
                         <p>
                             The system uses a dialogue state enum to track NPC states and an event system triggered by player responses. This allows dialogue choices to affect NPC behavior and unlock different outcomes, while remaining flexible enough to support future expansion.
-                        </p>
-                        <p>
-                            This data-driven approach allowed me to quickly populate the world with NPCs, provide context for progression and direct players toward races and upgrade stations.
                         </p>
                     </div>
                     <div class="feature-visual">

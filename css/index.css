@@ -195,10 +195,10 @@
     background: var(--card-bg);
     color: var(--secondary-text);
     border: 1px solid var(--border);
-    padding: 1.5rem 2.5rem !important;
+    padding: 1.3rem 2.2rem !important;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    font-size: 1.7rem !important;
+    font-size: 1.5rem !important;
     cursor: pointer;
     border-radius: 8px;
     transition: all 0.3s ease;
